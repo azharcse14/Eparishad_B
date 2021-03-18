@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:onClick="hideKeyboard"
+    tools:context=".Activity.Loan.FinanceSupportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_baseline_dehaze_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Finance Support"
+                                android:textColor="@color/black"
+                                android:textSize="36sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                android:layout_marginBottom="16dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginBottom="26dp"
+                                android:background="@android:color/darker_gray"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                android:layout_marginBottom="16dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="Name">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/loanNameEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <CheckBox
+                                android:id="@+id/ifFsCbID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Finance Support / Loan Taken"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Finance Support Taken From"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                android:layout_marginBottom="16dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="Finance Support Taken From">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/fstfEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Institute"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                android:layout_marginBottom="16dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="Institute">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/instituteEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Amount"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                android:layout_marginBottom="16dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="Amount">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/amountEt"
+                                    android:inputType="number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Business Start Date"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:typeface="normal"
+                                android:layout_marginBottom="16dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="Day"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/dayAcTv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="none"
+                                        android:textColor="#000"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="Month"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/monthAcTv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="none"
+                                        android:textColor="#000"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="Year"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/yearAcTv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="none"
+                                        android:textColor="#000"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:text="Periods"
+                                android:textColor="@color/black"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:typeface="normal" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="periods">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/periodsEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="150dp">
+<!--                            <Button-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:backgroundTint="#424141"-->
+<!--                                android:text="Previous"-->
+<!--                                android:onClick="goToPreviousActivity"-->
+<!--                                android:textSize="26sp"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent" />-->
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#424141"
+                                android:text="Done"
+                                android:onClick="goToNextActivity"
+                                android:textSize="26sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

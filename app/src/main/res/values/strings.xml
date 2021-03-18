@@ -1,0 +1,326 @@
+<resources>
+    <string name="app_name">E-parishad_B</string>
+    <string name="copyright">© 2021 by CentureonIT. All Rights Reserved. </string>
+
+    <string-array name="title">
+
+        <item>Holding No</item>
+        <item>Holding Add</item>
+        <item>Head</item>
+        <item>Members</item>
+        <item>Religion</item>
+        <item>Land</item>
+        <item>House Type</item>
+        <item>Water</item>
+        <item>Sanitation</item>
+        <item>Electricity</item>
+        <item>Business</item>
+        <item>Loan</item>
+
+    </string-array>
+
+    <string-array name="msm">
+        <item>M Detail</item>
+        <item>Relation</item>
+        <item>Birth Info</item>
+        <item>Nationality</item>
+        <item>Vaccination</item>
+        <item>Disability</item>
+        <item>Mother Health</item>
+        <item>F Planning</item>
+        <item>SSN Program</item>
+        <item>TIN Info</item>
+        <item>Passport Info</item>
+        <item>D Licence</item>
+        <item>H Education</item>
+        <item>Study Info</item>
+        <item>Trainings</item>
+        <item>Profession</item>
+        <item>Marital Status</item>
+        <item>P Status</item>
+        <item>Income</item>
+        <item>Bank Detail</item>
+        <item>Living Detail</item>
+    </string-array>
+
+    <string-array name="business">
+        <item>Business Detail</item>
+        <item>Industry Detail</item>
+        <item>Rice Mill</item>
+        <item>Vehicle</item>
+        <item>Interest of Security</item>
+        <item>Farming Detail</item>
+        <item>LiveStock Detail</item>
+        <item>Fisheries Detail</item>
+    </string-array>
+
+    <string-array name="ward">
+        <item>None</item>
+        <item>Ward 1</item>
+        <item>Ward 2</item>
+        <item>Ward 3</item>
+        <item>Ward 4</item>
+        <item>Ward 5</item>
+        <item>Ward 6</item>
+        <item>Ward 7</item>
+        <item>Ward 8</item>
+        <item>Ward 9</item>
+    </string-array>
+
+    <string-array name="village">
+        <item>None</item>
+        <item>চৌধুরীখলা</item>
+        <item>পশ্চিম কাচার</item>
+        <item>শ্রীবিদ্যা</item>
+        <item>ভাঙ্গামুড়া</item>
+        <item>মধ্যম বিজয়পুর</item>
+        <item>নোয়াপাড়া</item>
+        <item>ধরনীবন্ধ</item>
+        <item>উত্তর বিজয়পুর</item>
+        <item>ধনমুড়া</item>
+        <item>লালমতি</item>
+        <item>জামমুড়া</item>
+        <item>বৈষ্ণবমুড়া</item>
+        <item>হোসেনপুর</item>
+        <item>কিছমত</item>
+        <item>সুধন্যপুর</item>
+        <item>সানন্দা</item>
+        <item>গাবতলী</item>
+        <item>সাওড়াতলী</item>
+        <item>ঘোষগাঁও</item>
+        <item>সুলতানপুর</item>
+        <item>হাড়াতলী</item>
+        <item>কৃষ্ণপুর</item>
+        <item>তুলাতলী</item>
+        <item>লালমাই</item>
+        <item>রাজার খলা</item>
+        <item>রামনগর</item>
+    </string-array>
+
+    <string-array name="day">
+        <item>Day</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>Aug</item>
+        <item>September</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>Year</item>
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+        <item>2007</item>
+        <item>2006</item>
+        <item>2005</item>
+        <item>2004</item>
+        <item>2003</item>
+        <item>2002</item>
+        <item>2001</item>
+        <item>2000</item>
+        <item>1999</item>
+        <item>1998</item>
+        <item>1997</item>
+        <item>1996</item>
+        <item>1995</item>
+        <item>1994</item>
+        <item>1993</item>
+        <item>1992</item>
+        <item>1992</item>
+        <item>1991</item>
+        <item>1990</item>
+        <item>1989</item>
+        <item>1988</item>
+        <item>1987</item>
+        <item>1986</item>
+        <item>1985</item>
+        <item>1984</item>
+        <item>1983</item>
+        <item>1982</item>
+        <item>1981</item>
+        <item>1980</item>
+        <item>1979</item>
+        <item>1978</item>
+        <item>1977</item>
+        <item>1976</item>
+        <item>1975</item>
+        <item>1974</item>
+        <item>1973</item>
+        <item>1972</item>
+        <item>1971</item>
+        <item>1970</item>
+        <item>1969</item>
+        <item>1968</item>
+        <item>1967</item>
+        <item>1966</item>
+        <item>1965</item>
+        <item>1964</item>
+        <item>1963</item>
+        <item>1962</item>
+        <item>1961</item>
+        <item>1960</item>
+        <item>1959</item>
+        <item>1958</item>
+        <item>1957</item>
+        <item>1956</item>
+        <item>1955</item>
+        <item>1954</item>
+        <item>1953</item>
+        <item>1952</item>
+        <item>1951</item>
+        <item>1950</item>
+        <item>1949</item>
+        <item>1948</item>
+        <item>1947</item>
+        <item>1946</item>
+        <item>1945</item>
+        <item>1944</item>
+        <item>1943</item>
+        <item>1942</item>
+        <item>1941</item>
+        <item>1940</item>
+        <item>1939</item>
+        <item>1938</item>
+        <item>1937</item>
+        <item>1936</item>
+        <item>1935</item>
+        <item>1934</item>
+        <item>1933</item>
+        <item>1932</item>
+        <item>1931</item>
+        <item>1930</item>
+        <item>1929</item>
+        <item>1928</item>
+        <item>1927</item>
+        <item>1926</item>
+        <item>1925</item>
+        <item>1924</item>
+        <item>1923</item>
+        <item>1922</item>
+        <item>1921</item>
+        <item>1920</item>
+    </string-array>
+
+    <string-array name="education">
+        <item>No Literacy</item>
+        <item>M.phil</item>
+        <item>PhD (or equivalent)</item>
+        <item>Masters (or equivalent)</item>
+        <item>Takmeel (Masters)</item>
+        <item>Honours (or equivalent)</item>
+        <item>Fazila (Honours)</item>
+        <item>Graduation (4 years)</item>
+        <item>Graduation (3 Years)</item>
+        <item>Diploma</item>
+        <item>HSC (or equivalent)</item>
+        <item>Alim</item>
+        <item>SSC (or equivalent)</item>
+        <item>Dakhil</item>
+        <item>Junior school certificate (JSC)</item>
+        <item>Junior Dakhil Certificate (JDC)</item>
+        <item>Primary School Certificate (PSC)</item>
+        <item>Ebtadayee Madrasah exam</item>
+        <item>Sanabia Ulaiya examination</item>
+        <item>Technical and Vocational Education</item>
+        <item>Mutawassitah</item>
+        <item>Below Primary</item>
+        <item>Hafizia</item>
+        <item>No Schooling</item>
+        <item>Can do Sign only</item>
+
+    </string-array>
+
+    <string-array name="occupation">
+        <item>None</item>
+        <item>Farming</item>
+        <item>Livestock</item>
+        <item>Fisheries</item>
+        <item>Agri-labour</item>
+        <item>Business</item>
+        <item>Salaried Job</item>
+        <item>Government Job</item>
+        <item>Private Job</item>
+        <item>Teaching</item>
+        <item>NGO Job</item>
+        <item>Wage-basis</item>
+        <item>Caste Occupation</item>
+        <item>Cottage Industry</item>
+        <item>Wage Earner</item>
+        <item>Maid Servant</item>
+        <item>Mechnanics</item>
+        <item>Rickshaw/Van pulling Driver</item>
+        <item>Other Transport</item>
+        <item>Retired</item>
+        <item>None of the Options</item>
+        <item>Student</item>
+        <item>Foreign Job</item>
+        <item>House Wife</item>
+        <item>Carpenter</item>
+        <item>Unemployed</item>
+        <item>Pottery</item>
+        <item>Autorickshaw driver</item>
+        <item>CNG driver</item>
+        <item>Notary</item>
+        <item>Milkman</item>
+        <item>Gardener</item>
+        <item>Doctor</item>
+        <item>Engineer</item>
+        <item>Sales Person</item>
+        <item>Banker</item>
+        <item>None</item>
+
+    </string-array>
+</resources>

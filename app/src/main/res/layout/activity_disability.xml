@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:onClick="hideKeyboard"
+    tools:context=".Activity.Members.DisabilityActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_baseline_dehaze_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Any disability"
+                            android:textSize="36sp"
+                            android:layout_marginBottom="16dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <CheckBox
+                            android:id="@+id/blindCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Blind"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/deafCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deaf"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/dumbCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dumb"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/chronicDiseaseCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chronic Disease"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/specialChildCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Special Child"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/physicallyChallengedCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Physically Challenged"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/autismCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Autism"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/accidentCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Accident"
+                            android:textSize="20sp"/>
+
+                        <CheckBox
+                            android:id="@+id/otherCB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Other"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Previous"
+                            android:onClick="goToPreviousActivity"
+                            android:textSize="26sp"
+                            android:backgroundTint="#424141"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next"
+                            android:onClick="goToNextActivity"
+                            android:textSize="26sp"
+                            android:backgroundTint="#424141"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

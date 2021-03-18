@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.azhar.e_parishad_b">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Eparishad_B">
+        <activity android:name=".Activity.FSAActivity"/>
+        <activity android:name=".Activity.Members.EducationDetailsActivity" />
+        <activity android:name=".Activity.Members.MemberLiveActivity" />
+        <activity android:name=".Activity.Members.BankDetailActivity" />
+        <activity android:name=".Activity.Members.IncomeDetailActivity" />
+        <activity android:name=".Activity.Members.PersonalStatusDetailActivity" />
+        <activity android:name=".Activity.Members.MaritalStatusDetailActivity" />
+        <activity android:name=".Activity.Members.ProfessionActivity" />
+        <activity android:name=".Activity.Members.TrainingActivity" />
+        <activity android:name=".Activity.Members.MemberFirstBFMGActivity"/>
+        <activity android:name=".Activity.Login.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Activity.WaterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SanitationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ReligionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HouseTypeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HeadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ElectricityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.TINinformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.SocialSaftyNetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.PassportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.MotherHealthCareInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.MemberVaccinationInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.MembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.MemberNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.MemberNationalityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.MemberRelationWithKhanaHeadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.Member_Details_One_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.FamillyPlaningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.EducationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.DrivingLicenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Members.DisabilityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Loan.LoanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Loan.FinanceSupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.VehicalBusinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.RiceMillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.LiveStockDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.InterestOfSecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.IndustryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.FisheriseDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.FarmingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Business.BusinessDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HoldingAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HoldingNoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.MainActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+
+        <activity android:name=".Activity.SplashScreenActivity"
+            android:theme="@style/AppTheme.Launcher">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+        </activity>
+    </application>
+
+</manifest>

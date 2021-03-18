@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:onClick="hideKeyboard"
+    tools:context=".Activity.LandActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="16dp"
+            android:background="@color/black"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_baseline_dehaze_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="Land amount in decimal"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Own Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/ownLandTv"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/text_view_border"
+                                        android:padding="8dp"
+                                        android:text="0"
+                                        android:textColor="@color/black"
+                                        android:textSize="24sp"
+                                        android:typeface="normal" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Living Land"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp"
+                                        android:textColor="@color/black"/>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/livingLandOlEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Farming Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp"/>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/farmingLandOlEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Leased Given"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp"/>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/leasedGivenEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Pond"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/pondOlEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Garden"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/gardenOlEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Hill"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/hillOlEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Other Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp"/>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/otherLandOlEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:text="Total Own Land"
+                                    android:onClick="totalOwnLand"
+                                    android:backgroundTint="@color/black"/>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@color/black" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Not Own Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/notOwnLandTv"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/text_view_border"
+                                        android:padding="8dp"
+                                        android:text="0"
+                                        android:textColor="@color/black"
+                                        android:textSize="24sp"
+                                        android:typeface="normal" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Living Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/livingLandNolEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Farming Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/farmingLandNolEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Leased Taken"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/leasedTakenEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Pond"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/pondNolEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Garden"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/gardenNolEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Hill"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/hillNolEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Other Land"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:layout_marginStart="18dp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/otherLandNolEt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:layout_gravity="center"
+                                        android:onClick="totalOtherLand"
+                                        android:text="Total Not Own Land"
+                                        android:backgroundTint="@color/black"/>
+
+                                </LinearLayout>
+
+
+                                <CheckBox
+                                    android:id="@+id/landhasnotbeendividedyetCB"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Land has not been divided yet"
+                                    android:textColor="@color/black"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="150dp"
+                                    android:layout_marginTop="20dp">
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="#424141"
+                                        android:onClick="goToPreviousActivity"
+                                        android:text="Previous"
+                                        android:textSize="26sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="#424141"
+                                        android:onClick="goToNextActivity"
+                                        android:text="Next"
+                                        android:textSize="26sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

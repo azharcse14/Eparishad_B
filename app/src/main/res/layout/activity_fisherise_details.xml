@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:onClick="hideKeyboard"
+    tools:context=".Activity.Business.FisheriseDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_baseline_dehaze_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="Fisheries Detail (In KG)"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Rui"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/ruiEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Catla"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/catlaEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Mixed Fish"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/mixedFishEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Pangas"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/pangasEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Koi"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/koiEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Shing/Magur"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/shingEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Tilapia/Nilotica"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/telapiaEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Shrimp"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/shrimpEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Prawn"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/prawnEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="16dp"
+                                        android:layout_weight="1"
+                                        android:text="Others"
+                                        android:textColor="@color/black"
+                                        android:textSize="28sp" />
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="1"
+                                        android:hint="0">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/othersEt"
+                                            android:inputType="number"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </LinearLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp">
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="#424141"
+                                        android:text="Previous"
+                                        android:onClick="goToPreviousActivity"
+                                        android:textSize="26sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <Button
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="#424141"
+                                        android:text="Next"
+                                        android:onClick="goToNextActivity"
+                                        android:textSize="26sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
