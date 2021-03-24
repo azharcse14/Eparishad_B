@@ -22,8 +22,8 @@ public class FDEntity {
     @ColumnInfo(name = "username")
     public String username;
 
-    @ColumnInfo(name = "survey_id")
-    public String survey_id;
+    @ColumnInfo(name = "surveyID")
+    public String surveyID;
 
     @ColumnInfo(name = "holdingnumber")
     public String holdingnumber;
@@ -330,13 +330,16 @@ public class FDEntity {
     @ColumnInfo(name = "isSync")
     public String isSync;
 
+    @ColumnInfo(name = "surveystatus")
+    public String surveystatus;
 
-    public FDEntity(String datei, String facodei, String fauseri, String usernamei, String survey_idi, String holdingnumberi, String khananumberi, String lati, String lngi, String kinnumberi, String divisioni, String districti, String upazilai, String unioni, String postcodei, String villagei, String wardi, String khanaheadi, String telephoneNumberi, String khanatypei, String religioni, String ethnicityi, String ownlivinglandi, String ownfarminglandi, String ownleasegiveni, String ownpondi, String owngardeni, String ownhilli, String ownotheri, String ownlandTotali, String otherlivinglandi, String otherfarminglandi, String otherleasetakeni, String otherpondi, String othergardeni, String otherhilli, String otherlandotheri, String otherlandTotali, String isNotLandDividedi, String housetypei, String watersupplyi, String sanitationi, String iselectricityi, String typeofelectricityi, String businesstypei, String businessnamei, String businesssourcesoffinancei, String tradelicensemumberi, String tradelicensemumberimagei, String businessAddressi, String businessStartYeari, String businessStartMonthi, String businessStartDayi, String industryowneri, String typeofindustryi, String industsourcesoffinancei, String formofownershipi, String ifricemillingi, String riceMillProductionCapacityi, String typeofricemilledi, String isricemilledOwni, String interestedingovtfixedratei, String iftruckbusinessi, String vehicletypei, String numberoftrucksi, String trucktotalcapacityi, String trucksourceoffinancei, String istruckownedi, String interestdrivingtrucksforgovti, String interestofsecuritiesi, String incomefromhousepropertyi, String incomefromagriculturali, String capitalgaini, String incomefromaothersourcesi, String aushi, String amani, String boroi, String wheati, String maizei, String pulsesi, String oilseedsi, String potatoi, String tomatoi, String vegetablei, String sugarcanei, String jutei, String farmingsellingtoGovtfixedpricei, String farmingsellingtoPrivatetradersi, String cattlei, String buffaloi, String sheepi, String goati, String chickeni, String egghensi, String ducki, String eggsducki, String ruhii, String catlai, String mixedfishi, String pangasi, String koii, String maguri, String tilapiai, String shrimpi, String prawni, String othersi, String isSynci ) {
+
+    public FDEntity(String datei, String facodei, String fauseri, String usernamei, String surveyIDi, String holdingnumberi, String khananumberi, String lati, String lngi, String kinnumberi, String divisioni, String districti, String upazilai, String unioni, String postcodei, String villagei, String wardi, String khanaheadi, String telephoneNumberi, String khanatypei, String religioni, String ethnicityi, String ownlivinglandi, String ownfarminglandi, String ownleasegiveni, String ownpondi, String owngardeni, String ownhilli, String ownotheri, String ownlandTotali, String otherlivinglandi, String otherfarminglandi, String otherleasetakeni, String otherpondi, String othergardeni, String otherhilli, String otherlandotheri, String otherlandTotali, String isNotLandDividedi, String housetypei, String watersupplyi, String sanitationi, String iselectricityi, String typeofelectricityi, String businesstypei, String businessnamei, String businesssourcesoffinancei, String tradelicensemumberi, String tradelicensemumberimagei, String businessAddressi, String businessStartYeari, String businessStartMonthi, String businessStartDayi, String industryowneri, String typeofindustryi, String industsourcesoffinancei, String formofownershipi, String ifricemillingi, String riceMillProductionCapacityi, String typeofricemilledi, String isricemilledOwni, String interestedingovtfixedratei, String iftruckbusinessi, String vehicletypei, String numberoftrucksi, String trucktotalcapacityi, String trucksourceoffinancei, String istruckownedi, String interestdrivingtrucksforgovti, String interestofsecuritiesi, String incomefromhousepropertyi, String incomefromagriculturali, String capitalgaini, String incomefromaothersourcesi, String aushi, String amani, String boroi, String wheati, String maizei, String pulsesi, String oilseedsi, String potatoi, String tomatoi, String vegetablei, String sugarcanei, String jutei, String farmingsellingtoGovtfixedpricei, String farmingsellingtoPrivatetradersi, String cattlei, String buffaloi, String sheepi, String goati, String chickeni, String egghensi, String ducki, String eggsducki, String ruhii, String catlai, String mixedfishi, String pangasi, String koii, String maguri, String tilapiai, String shrimpi, String prawni, String othersi, String isSynci, String surveystatusi ) {
         this.date = datei;
         this.facode = facodei;
         this.fauser = fauseri;
         this.username = usernamei;
-        this.survey_id = survey_idi;
+        this.surveyID = surveyIDi;
         this.holdingnumber = holdingnumberi;
         this.khananumber = khananumberi;
         this.lat = lati;
@@ -439,15 +442,16 @@ public class FDEntity {
         this.prawn = prawni;
         this.others = othersi;
         this.isSync = isSynci;
+        this.surveystatus = surveystatusi;
     }
 
-    public FDEntity(int id, String date, String facode, String fauser, String username, String survey_id, String holdingnumber, String khananumber, String lat, String lng, String kinnumber, String division, String district, String upazila, String union, String postcode, String village, String ward, String khanahead, String telephoneNumber, String khanatype, String religion, String ethnicity, String ownlivingland, String ownfarmingland, String ownleasegiven, String ownpond, String owngarden, String ownhill, String ownother, String ownlandTotal, String otherlivingland, String otherfarmingland, String otherleasetaken, String otherpond, String othergarden, String otherhill, String otherlandother, String otherlandTotal, String isNotLandDivided, String housetype, String watersupply, String sanitation, String iselectricity, String typeofelectricity, String businesstype, String businessname, String businesssourcesoffinance, String tradelicensemumber, String tradelicensemumberimage, String businessAddress, String businessStartYear, String businessStartMonth, String businessStartDay, String industryowner, String typeofindustry, String industsourcesoffinance, String formofownership, String ifricemilling, String riceMillProductionCapacity, String typeofricemilled, String isricemilledOwn, String interestedingovtfixedrate, String iftruckbusiness, String vehicletype, String numberoftrucks, String trucktotalcapacity, String trucksourceoffinance, String istruckowned, String interestdrivingtrucksforgovt, String interestofsecurities, String incomefromhouseproperty, String incomefromagricultural, String capitalgain, String incomefromaothersources, String aush, String aman, String boro, String wheat, String maize, String pulses, String oilseeds, String potato, String tomato, String vegetable, String sugarcane, String jute, String farmingsellingtoGovtfixedprice, String farmingsellingtoPrivatetraders, String cattle, String buffalo, String sheep, String goat, String chicken, String egghens, String duck, String eggsduck, String ruhi, String catla, String mixedfish, String pangas, String koi, String magur, String tilapia, String shrimp, String prawn, String others, String isSync) {
+    public FDEntity(int id, String date, String facode, String fauser, String username, String surveyID, String holdingnumber, String khananumber, String lat, String lng, String kinnumber, String division, String district, String upazila, String union, String postcode, String village, String ward, String khanahead, String telephoneNumber, String khanatype, String religion, String ethnicity, String ownlivingland, String ownfarmingland, String ownleasegiven, String ownpond, String owngarden, String ownhill, String ownother, String ownlandTotal, String otherlivingland, String otherfarmingland, String otherleasetaken, String otherpond, String othergarden, String otherhill, String otherlandother, String otherlandTotal, String isNotLandDivided, String housetype, String watersupply, String sanitation, String iselectricity, String typeofelectricity, String businesstype, String businessname, String businesssourcesoffinance, String tradelicensemumber, String tradelicensemumberimage, String businessAddress, String businessStartYear, String businessStartMonth, String businessStartDay, String industryowner, String typeofindustry, String industsourcesoffinance, String formofownership, String ifricemilling, String riceMillProductionCapacity, String typeofricemilled, String isricemilledOwn, String interestedingovtfixedrate, String iftruckbusiness, String vehicletype, String numberoftrucks, String trucktotalcapacity, String trucksourceoffinance, String istruckowned, String interestdrivingtrucksforgovt, String interestofsecurities, String incomefromhouseproperty, String incomefromagricultural, String capitalgain, String incomefromaothersources, String aush, String aman, String boro, String wheat, String maize, String pulses, String oilseeds, String potato, String tomato, String vegetable, String sugarcane, String jute, String farmingsellingtoGovtfixedprice, String farmingsellingtoPrivatetraders, String cattle, String buffalo, String sheep, String goat, String chicken, String egghens, String duck, String eggsduck, String ruhi, String catla, String mixedfish, String pangas, String koi, String magur, String tilapia, String shrimp, String prawn, String others, String isSync, String surveystatus) {
         this.id = id;
         this.date = date;
         this.facode = facode;
         this.fauser = fauser;
         this.username = username;
-        this.survey_id = survey_id;
+        this.surveyID = surveyID;
         this.holdingnumber = holdingnumber;
         this.khananumber = khananumber;
         this.lat = lat;
@@ -550,6 +554,7 @@ public class FDEntity {
         this.prawn = prawn;
         this.others = others;
         this.isSync = isSync;
+        this.surveystatus = surveystatus;
     }
 
 

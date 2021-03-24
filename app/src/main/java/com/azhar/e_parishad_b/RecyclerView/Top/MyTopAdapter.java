@@ -3,7 +3,7 @@ package com.azhar.e_parishad_b.RecyclerView.Top;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +24,6 @@ import com.azhar.e_parishad_b.Networking.EPNET.Response.ResponseObject;
 import com.azhar.e_parishad_b.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -43,8 +42,10 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
     String[] arrOfHousetype, arrOfWaterSupply, arrOfSanitation;
     String [] arrOfMemberVaccine, arrOfDisability, arrOfSocialSafetyNet, arrOfTraining;
 
+    View successfulLayout, errorLayout;
 
-    String date, facode, fauser, username, survey_id, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
+
+    String date, facode, fauser, username, surveyID, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
             village, ward, khanahead, telephoneNumber, khanatype, religion, ethnicity,
             ownlivingland, ownfarmingland, ownleasegiven, ownpond,
             owngarden, ownhill, ownother, ownlandTotal, otherlivingland, otherfarmingland, otherleasetaken, otherpond, othergarden,
@@ -57,10 +58,10 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
             aush, aman, boro, wheat, maize, pulses, oilseeds, potato, tomato, vegetable, sugarcane, jute, farmingsellingtoGovtfixedprice,
             farmingsellingtoPrivatetraders,
             cattle, buffalo, sheep, goat, chicken, egghens, duck, eggsduck,
-            ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others;
+            ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, surveystatus;
 
 
-    String name, member_id, bloodgroup, fathername, mothername, gender, isHead, bdaydate,
+    String membername, member_id, bloodgroup, fathername, mothername, gender, relationship, bdaydate,
             bdaymonth, bdayyear, age, birthcertificateno, birthcertificateimage, nationality, nid,
             nidimage, membervaccine, disability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
             consultingwith, iseligiblecouple, anyfamilyplaning, socialsafetynet, socialsafetynetcardinfo, socialsafetynetcardphoto,
@@ -86,6 +87,8 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
     @Override
     public MyTopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.main_child_layout, parent, false);
+        successfulLayout = LayoutInflater.from(context).inflate(R.layout.successful_toast_layout, parent, false);
+        errorLayout = LayoutInflater.from(context).inflate(R.layout.error_toast_layout, parent, false);
 
         MyTopViewHolder myTopViewHolder = new MyTopViewHolder(view);
 
@@ -136,7 +139,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                 facode = dataSet.get(position).facode;
                 fauser = dataSet.get(position).fauser;
                 username = dataSet.get(position).username;
-                survey_id = dataSet.get(position).survey_id;
+                surveyID = dataSet.get(position).surveyID;
                 holdingnumber = dataSet.get(position).holdingnumber;
                 khananumber = dataSet.get(position).khananumber;
                 lat = dataSet.get(position).lat;
@@ -238,6 +241,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                 shrimp = dataSet.get(position).shrimp;
                 prawn = dataSet.get(position).prawn;
                 others = dataSet.get(position).others;
+                surveystatus = dataSet.get(position).surveystatus;
 
 
                 ///==================== SQLITE===============
@@ -258,14 +262,14 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
 
                 if (cursor.getCount() > 0) {
                     while (cursor.moveToNext()) {
-                        name = cursor.getString(1);
-                        System.out.println("in: " + name);
+                        membername = cursor.getString(1);
+                        System.out.println("in: " + membername);
                         member_id = cursor.getString(2);
                         bloodgroup = cursor.getString(3);
                         fathername = cursor.getString(4);
                         mothername = cursor.getString(5);
                         gender = cursor.getString(6);
-                        isHead = cursor.getString(7);
+                        relationship = cursor.getString(7);
                         bdaydate = cursor.getString(8);
                         bdaymonth = cursor.getString(9);
                         bdayyear = cursor.getString(10);
@@ -324,7 +328,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                         mlivingAddress = cursor.getString(63);
                         memberimage = cursor.getString(64);
 
-                        memberObject = new MemberObject(name, member_id, bloodgroup, fathername, mothername, gender, isHead, bdaydate,
+                        memberObject = new MemberObject(membername, member_id, bloodgroup, fathername, mothername, gender, relationship, bdaydate,
                                 bdaymonth, bdayyear, age, birthcertificateno, birthcertificateimage, nationality, nid,
                                 nidimage, arrOfMemberVaccine, arrOfDisability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
                                 consultingwith, iseligiblecouple, anyfamilyplaning, arrOfSocialSafetyNet, socialsafetynetcardinfo, socialsafetynetcardphoto,
@@ -427,7 +431,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                 System.out.println(memberObjectArrayList.size());
 
 
-                khanaObject = new KhanaObject(date, facode, fauser, username, survey_id, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
+                khanaObject = new KhanaObject(date, facode, fauser, username, surveyID, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
                         village, ward, khanahead, telephoneNumber, khanatype, religion, ethnicity,
                         ownlivingland, ownfarmingland, ownleasegiven, ownpond,
                         owngarden, ownhill, ownother, ownlandTotal, otherlivingland, otherfarmingland, otherleasetaken, otherpond, othergarden,
@@ -440,7 +444,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                         aush, aman, boro, wheat, maize, pulses, oilseeds, potato, tomato, vegetable, sugarcane, jute, farmingsellingtoGovtfixedprice,
                         farmingsellingtoPrivatetraders,
                         cattle, buffalo, sheep, goat, chicken, egghens, duck, eggsduck,
-                        ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, memberObjectArrayList, loanObjectArrayList);
+                        ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, surveystatus, memberObjectArrayList, loanObjectArrayList);
 
 
 
@@ -450,7 +454,15 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                     @Override
                     public void onResponse(Call<ResponseObject> call, Response<ResponseObject> response) {
 
-                        Toast.makeText(context, response + "Successfull", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(context, "Successful", Toast.LENGTH_LONG).show();
+
+                        //Creating the Toast object
+                        Toast toast = new Toast(context);
+                        toast.setDuration(Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                        toast.setView(successfulLayout);//setting the view of custom toast layout
+                        toast.show();
+
                         memberObjectArrayList.clear();
                         loanObjectArrayList.clear();
                         System.out.println(response);
@@ -458,7 +470,13 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
 
                     @Override
                     public void onFailure(Call<ResponseObject> call, Throwable t) {
-                        Toast.makeText(context, "Error", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(context, "Error", Toast.LENGTH_LONG).show();
+                        //Creating the Toast object
+                        Toast toast = new Toast(context);
+                        toast.setDuration(Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                        toast.setView(errorLayout);//setting the view of custom toast layout
+                        toast.show();
 
                     }
                 });

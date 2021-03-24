@@ -47,7 +47,7 @@ public class MotherHealthCareInformationActivity extends AppCompatActivity {
 
         if (sp.contains("vaccination")){
             vaccinationSp = sp.getString("vaccination", "Data Not Found");
-            if (vaccinationSp == "vaccination"){
+            if (vaccinationSp == "Yes"){
                 vaccinationCB.setChecked(true);
             }
         }
@@ -90,7 +90,9 @@ public class MotherHealthCareInformationActivity extends AppCompatActivity {
         if (vaccinationCB.isChecked()){
             String value = vaccinationCB.getText().toString();
             stringBuilder.append(value+ "");
-            vaccination = "vaccination";
+            vaccination = "Yes";
+        }else {
+            vaccination = "No";
         }
 
         String v = String.valueOf(stringBuilder);

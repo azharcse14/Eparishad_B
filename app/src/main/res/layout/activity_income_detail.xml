@@ -33,7 +33,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -87,7 +88,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Income from main occupation (BDT)"
+                                android:text="@string/income_from_main_occupation_bdt"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="6dp"
                                 android:textColor="@color/black"
@@ -98,10 +99,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="26dp"
-                                android:hint="Income">
+                                android:hint="@string/income">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/incomeMainEt"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
 
@@ -110,7 +112,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Income from 2nd occupation (BDT)"
+                                android:text="@string/income_from_2nd_occupation_bdt"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="6dp"
                                 android:textColor="@color/black"
@@ -121,10 +123,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="26dp"
-                                android:hint="Income">
+                                android:hint="@string/income">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/incomeSecondEt"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
 
@@ -133,7 +136,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Additional Income (BDT)"
+                                android:text="@string/additional_income_bdt"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="6dp"
                                 android:textColor="@color/black"
@@ -144,10 +147,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="26dp"
-                                android:hint="Income">
+                                android:hint="@string/income">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/additionalIncomeEt"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
 
@@ -156,7 +160,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Mobile Number"
+                                android:text="@string/mobile_number"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="6dp"
                                 android:textColor="@color/black"
@@ -167,7 +171,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="36dp"
-                                android:hint="+08801XXXXXXXXXX">
+                                android:hint="@string/_08801xxxxxxxxxx">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:inputType="number"
@@ -180,7 +184,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Email"
+                                android:text="@string/email"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="6dp"
                                 android:textColor="@color/black"
@@ -191,7 +195,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="36dp"
-                                android:hint="example@email.com">
+                                android:hint="@string/example_email_com">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:inputType="textEmailAddress"
@@ -214,7 +218,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:onClick="goToPreviousActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -224,7 +228,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:onClick="goToNextActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"

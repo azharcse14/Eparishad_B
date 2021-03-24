@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">E-parishad_B</string>
     <string name="copyright">© 2021 by CentureonIT. All Rights Reserved. </string>
+    <string name="income">Income (BDT)</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="income_from_2nd_occupation_bdt">Income from 2nd occupation</string>
+    <string name="email">Email</string>
+    <string name="income_from_main_occupation_bdt">Income from main occupation</string>
+    <string name="todo">TODO</string>
+    <string name="example_email_com">example@email.com</string>
+    <string name="_08801xxxxxxxxxx">+08801XXXXXXXXXX</string>
+    <string name="additional_income_bdt">Additional Income</string>
 
     <string-array name="title">
 

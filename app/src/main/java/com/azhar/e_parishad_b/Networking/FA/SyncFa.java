@@ -1,6 +1,7 @@
 package com.azhar.e_parishad_b.Networking.FA;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 
 
@@ -24,6 +25,10 @@ public class SyncFa {
     int data_in_roomDB = 0, data_from_server = 0;
     Repository repository;
     List<FaEntity> faEntityList;
+
+    SharedPreferences LOGIN;
+    String fauser;
+
 
     public SyncFa(Context context) {
         this.context = context;
@@ -55,8 +60,19 @@ public class SyncFa {
     }
 
     void make_url_request(){
+
+        //==================================================================================
+        //================= Shared Preferences value retrive  for db=========================
+        //====================================================================================
+        LOGIN = context.getSharedPreferences("LOGIN", Context.MODE_PRIVATE);
+
+
+        if (LOGIN.contains("user")) {
+            fauser = LOGIN.getString("user", "Data Not Found");
+        }
+
         try {
-            String url = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D=jamil_fsa@email.com";
+            String url = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D="+fauser;
             HttpHandler httpHandler = new HttpHandler();
             json = httpHandler.makeServiceCall(url);
         }catch (Exception e){

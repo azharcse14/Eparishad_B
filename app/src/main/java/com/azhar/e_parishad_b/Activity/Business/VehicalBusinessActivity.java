@@ -50,8 +50,8 @@ public class VehicalBusinessActivity extends AppCompatActivity {
 
         SharedPreferences sp = getSharedPreferences("VehicalBusiness", Context.MODE_PRIVATE);
 
-        if (sp.contains("ifBusinessV")){
-            ifBusinessSp = sp.getString("ifBusinessV", "Data Not Found");
+        if (sp.contains("ifBusiness")){
+            ifBusinessSp = sp.getString("ifBusiness", "Data Not Found");
             if (ifBusinessSp == "Yes"){
                 ifBusinessCB.setChecked(true);
             }

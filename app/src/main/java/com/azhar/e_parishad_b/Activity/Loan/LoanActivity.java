@@ -38,7 +38,7 @@ public class LoanActivity extends AppCompatActivity {
 
     SharedPreferences LOGIN, HoldingNo, HoldingAdd, KhanaHead, Religion, OwnLand, OtherLand, Land, HouseType, waterSupply, Sanitation, Electricity, Business, IndustryDetails, RiceMill, VehicalBusiness, InterestOfSecurity, FarmingDetails, LiveStockDetail, FisheriseDetails;
 
-    String date, facode, fauser, username, survey_id, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
+    String date, facode, fauser, username, surveyID, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
             village, ward, khanahead, telephoneNumber, khanatype, religion, ethnicity,
             ownlivingland, ownfarmingland, ownleasegiven, ownpond,
             owngarden, ownhill, ownother, ownlandTotal, otherlivingland, otherfarmingland, otherleasetaken, otherpond, othergarden,
@@ -51,7 +51,7 @@ public class LoanActivity extends AppCompatActivity {
             aush, aman, boro, wheat, maize, pulses, oilseeds, potato, tomato, vegetable, sugarcane, jute, farmingsellingtoGovtfixedprice,
             farmingsellingtoPrivatetraders,
             cattle, buffalo, sheep, goat, chicken, egghens, duck, eggsduck,
-            ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, isSync;
+            ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, isSync, surveystatus;
 
 
     @Override
@@ -82,7 +82,7 @@ public class LoanActivity extends AppCompatActivity {
 
         //====================================================================================
         String timeStamp = String.valueOf(TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis()));
-        survey_id = facode+"-"+timeStamp;
+        surveyID = facode+"-"+timeStamp;
         //====================================================================================
         HoldingNo = getSharedPreferences("HoldingNo", Context.MODE_PRIVATE);
         if (HoldingNo.contains("holdingNo")) {
@@ -454,6 +454,8 @@ public class LoanActivity extends AppCompatActivity {
         //===================================================================================
         isSync = "0";
 
+        surveystatus = "draft";
+
 
         //===================================================================================
         //===================================================================================
@@ -487,7 +489,7 @@ public class LoanActivity extends AppCompatActivity {
 
         Repository repository = new Repository(getApplicationContext());
 
-        FDEntity fdEntity = new FDEntity(date, facode, fauser, username, survey_id, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
+        FDEntity fdEntity = new FDEntity(date, facode, fauser, username, surveyID, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
                 village, ward, khanahead, telephoneNumber, khanatype, religion, ethnicity,
                 ownlivingland, ownfarmingland, ownleasegiven, ownpond,
                 owngarden, ownhill, ownother, ownlandTotal, otherlivingland, otherfarmingland, otherleasetaken, otherpond, othergarden,
@@ -500,7 +502,7 @@ public class LoanActivity extends AppCompatActivity {
                 aush, aman, boro, wheat, maize, pulses, oilseeds, potato, tomato, vegetable, sugarcane, jute, farmingsellingtoGovtfixedprice,
                 farmingsellingtoPrivatetraders,
                 cattle, buffalo, sheep, goat, chicken, egghens, duck, eggsduck,
-                ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, isSync);
+                ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, isSync, surveystatus);
         repository.InsertTask(fdEntity);
 
 

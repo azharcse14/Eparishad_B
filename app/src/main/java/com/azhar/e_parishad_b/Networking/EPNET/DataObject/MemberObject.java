@@ -2,7 +2,7 @@ package com.azhar.e_parishad_b.Networking.EPNET.DataObject;
 
 public class MemberObject {
 
-    String name, member_id, bloodgroup, fathername, mothername, gender, isHead, bdaydate,
+    String membername, member_id, bloodgroup, fathername, mothername, gender, relationship, bdaydate,
             bdaymonth, bdayyear, age, birthcertificateno, birthcertificateimage, nationality, nid, nidimage;
 
     String[] membervaccine;
@@ -22,14 +22,14 @@ public class MemberObject {
             accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage;
 
 
-    public MemberObject(String name, String member_id, String bloodgroup, String fathername, String mothername, String gender, String isHead, String bdaydate, String bdaymonth, String bdayyear, String age, String birthcertificateno, String birthcertificateimage, String nationality, String nid, String nidimage, String[] membervaccine, String[] disability, String ismothervaccination, String nearesthospital, String maternitynutritionconsultancy, String consultingwith, String iseligiblecouple, String anyfamilyplaning, String[] socialsafetynet, String socialsafetynetcardinfo, String socialsafetynetcardphoto, String isTinAvaiable, String tinNumber, String tinimage, String passportno, String passportimage, String isDrivingLicenceAvailable, String drivingLicenceNumber, String dirivinglicenseimage, String higheshtEducation, String doyoustudynow, String whichLevel, String educationinstitution, String educationFinishingWant, String[] training, String primaryprofession, String secondaryprofession, String ifunemployednow, String rickformofownership, String ricksourcesoffinance, String ricknooftransport, String maritialstatus, String marriageRegNo, String marriageRegDate, String divorceRegNo, String divorceRegDate, String incomefromMainOccuption, String incomefromSecondOccuption, String additionalincome, String mobaileNumber, String email, String accountNo, String mobaileNo, String bankName, String branchName, String ismemberlivehere, String mlivingAddress, String memberimage) {
-        this.name = name;
+    public MemberObject(String membername, String member_id, String bloodgroup, String fathername, String mothername, String gender, String relationship, String bdaydate, String bdaymonth, String bdayyear, String age, String birthcertificateno, String birthcertificateimage, String nationality, String nid, String nidimage, String[] membervaccine, String[] disability, String ismothervaccination, String nearesthospital, String maternitynutritionconsultancy, String consultingwith, String iseligiblecouple, String anyfamilyplaning, String[] socialsafetynet, String socialsafetynetcardinfo, String socialsafetynetcardphoto, String isTinAvaiable, String tinNumber, String tinimage, String passportno, String passportimage, String isDrivingLicenceAvailable, String drivingLicenceNumber, String dirivinglicenseimage, String higheshtEducation, String doyoustudynow, String whichLevel, String educationinstitution, String educationFinishingWant, String[] training, String primaryprofession, String secondaryprofession, String ifunemployednow, String rickformofownership, String ricksourcesoffinance, String ricknooftransport, String maritialstatus, String marriageRegNo, String marriageRegDate, String divorceRegNo, String divorceRegDate, String incomefromMainOccuption, String incomefromSecondOccuption, String additionalincome, String mobaileNumber, String email, String accountNo, String mobaileNo, String bankName, String branchName, String ismemberlivehere, String mlivingAddress, String memberimage) {
+        this.membername = membername;
         this.member_id = member_id;
         this.bloodgroup = bloodgroup;
         this.fathername = fathername;
         this.mothername = mothername;
         this.gender = gender;
-        this.isHead = isHead;
+        this.relationship = relationship;
         this.bdaydate = bdaydate;
         this.bdaymonth = bdaymonth;
         this.bdayyear = bdayyear;
@@ -89,12 +89,12 @@ public class MemberObject {
         this.memberimage = memberimage;
     }
 
-    public String getName() {
-        return name;
+    public String getMembername() {
+        return membername;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMembername(String membername) {
+        this.membername = membername;
     }
 
     public String getMember_id() {
@@ -137,12 +137,12 @@ public class MemberObject {
         this.gender = gender;
     }
 
-    public String getIsHead() {
-        return isHead;
+    public String getRelationship() {
+        return relationship;
     }
 
-    public void setIsHead(String isHead) {
-        this.isHead = isHead;
+    public void setRelationship(String relationship) {
+        this.relationship = relationship;
     }
 
     public String getBdaydate() {

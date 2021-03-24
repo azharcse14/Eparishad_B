@@ -138,7 +138,13 @@ public class FinanceSupportActivity extends AppCompatActivity {
             periods = periodsEt.getText().toString().trim();
         }
 
-        isfinancialsupported = "Yes";
+        if (ifFsCbID.isChecked()){
+            isfinancialsupported = "Yes";
+        }else {
+            isfinancialsupported = "No";
+        }
+
+//        isfinancialsupported = "Yes";
 
         Repository repository = new Repository(getApplicationContext());
 

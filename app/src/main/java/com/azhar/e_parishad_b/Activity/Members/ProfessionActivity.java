@@ -32,7 +32,8 @@ public class ProfessionActivity extends AppCompatActivity {
     String unemployed;
     String unemployedSp;
     AutoCompleteTextView primaryProfessionAcTv, secondaryProfessionAcTv;
-    String primaryPrfession [], secondaryPrfession[];
+    String[] primaryPrfession;
+    String[] secondaryPrfession;
     String primaryProfessionValue, secondaryProfessionValue;
 
     @Override
@@ -74,7 +75,7 @@ public class ProfessionActivity extends AppCompatActivity {
         }
         if (sp.contains("unemployed")){
             unemployedSp = sp.getString("unemployed", "Data Not Found");
-            if (unemployedSp == "unemployed"){
+            if (unemployedSp == "Yes"){
                 unemployedCB.setChecked(true);
             }
         }
@@ -132,7 +133,9 @@ public class ProfessionActivity extends AppCompatActivity {
         if (unemployedCB.isChecked()){
             String value = unemployedCB.getText().toString();
             stringBuilder.append(value);
-            unemployed = "unemployed";
+            unemployed = "Yes";
+        }else {
+            unemployed = "No";
         }
 
         String v = String.valueOf(stringBuilder);

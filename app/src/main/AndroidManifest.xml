@@ -151,6 +151,8 @@
 <!--            </intent-filter>-->
 
         </activity>
+
+        <service android:name=".Networking.EPNET.Service"/>
     </application>
 
 </manifest>

@@ -159,8 +159,8 @@ public class MemberLiveActivity extends AppCompatActivity {
         //===================================================================================
 
         MotherHCI = getSharedPreferences("MotherHCI", Context.MODE_PRIVATE);
-        if (MotherHCI.contains("cbVaccination")){
-            ismothervaccination = MotherHCI.getString("cbVaccination", "Data Not Found");
+        if (MotherHCI.contains("vaccination")){
+            ismothervaccination = MotherHCI.getString("vaccination", "Data Not Found");
         }
         if (MotherHCI.contains("hospitalName")){
             nearesthospital = MotherHCI.getString("hospitalName", "Data Not Found");
@@ -273,8 +273,8 @@ public class MemberLiveActivity extends AppCompatActivity {
         if (Profession.contains("secondaryProfession")){
             secondaryprofession = Profession.getString("secondaryProfession", "Data Not Found");
         }
-        if (Profession.contains("unemployedV")){
-            ifunemployednow = Profession.getString("unemployedV", "Data Not Found");
+        if (Profession.contains("unemployed")){
+            ifunemployednow = Profession.getString("unemployed", "Data Not Found");
         }
         if (Profession.contains("foo")){
             rickformofownership = Profession.getString("foo", "Data Not Found");
@@ -342,7 +342,7 @@ public class MemberLiveActivity extends AppCompatActivity {
         if (BankDetail.contains("bankName")){
             bankName = BankDetail.getString("bankName", "Data Not Found");
         }
-        if (BankDetail.contains("emailAdd")){
+        if (BankDetail.contains("branchName")){
             branchName = BankDetail.getString("branchName", "Data Not Found");
         }
 

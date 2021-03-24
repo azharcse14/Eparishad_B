@@ -65,122 +65,222 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fragmentContainer"
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_margin="16dp">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Relation With Khana Head"
-                            android:textSize="26sp"
-                            android:layout_marginBottom="16dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"/>
+                            android:layout_margin="20dp"
+                            android:orientation="vertical">
 
-                        <RadioGroup
-                            android:id="@+id/relationRg"
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Relation With Khana Head"
+                                android:textSize="26sp"
+                                android:layout_marginBottom="16dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <RadioGroup
+                                android:id="@+id/relationRg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Father"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mother"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Grand Father"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Grand Mother"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Great Grand Father"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Great Grand Mother"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Brother"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sister"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Son"
+                                    android:textSize="20sp"/>
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Daughter"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Grand Daughter"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Grand Son"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Husband"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Self"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Wife"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sister In Law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Brother In Law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Father In Law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mother In Law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Daughter In Law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Son In Law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Niece"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nephew"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Grand Daughter-in-law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Grand Son-in-law"
+                                    android:textSize="20sp"/>
+
+                                <RadioButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Other"
+                                    android:textSize="20sp"/>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#424141"
+                                android:text="Previous"
+                                android:onClick="goToPreviousActivity"
+                                android:textSize="26sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
 
-                            <RadioButton
-                                android:layout_width="match_parent"
+                            <Button
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Father"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Mother"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Grand Father"
-                                android:textSize="20sp"/>
-
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Grand Mother"
-                                android:textSize="20sp"/>
-
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Great Grand Father"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Great Grand Mother"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Brother"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Sister"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Son"
-                                android:textSize="20sp"/>
-                            <RadioButton
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Daughter"
-                                android:textSize="20sp"/>
-                        </RadioGroup>
+                                android:backgroundTint="#424141"
+                                android:text="Next"
+                                android:onClick="goToNextActivity"
+                                android:textSize="26sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </LinearLayout>
 
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp">
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#424141"
-                            android:text="Previous"
-                            android:onClick="goToPreviousActivity"
-                            android:textSize="26sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#424141"
-                            android:text="Next"
-                            android:onClick="goToNextActivity"
-                            android:textSize="26sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </LinearLayout>
-
+                </ScrollView>
 
             </LinearLayout>
 

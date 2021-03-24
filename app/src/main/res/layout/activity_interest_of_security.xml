@@ -132,6 +132,7 @@
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/ifhpEt"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
 
@@ -156,6 +157,7 @@
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/ifaEt"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
 
@@ -204,6 +206,7 @@
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/ifosEt"
+                                    android:inputType="number"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content" />
 

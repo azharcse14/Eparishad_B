@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/custom_toast_layout"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/custom_toast_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="Hello world"
+        android:src="@drawable/sucessfull"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/custom_toast_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sending Successful"
+        android:textColor="#04B6A6"
+        android:textStyle="bold"
+        android:textSize="46sp"
+        android:layout_gravity="center"/>
+</LinearLayout>

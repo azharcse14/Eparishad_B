@@ -3,7 +3,7 @@ package com.azhar.e_parishad_b.Networking.EPNET.DataObject;
 import java.util.ArrayList;
 
 public class KhanaObject {
-    String date, facode, fauser, username, survey_id, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
+    String date, facode, fauser, username, surveyID, holdingnumber, khananumber, lat, lng, kinnumber, division, district, upazila, union, postcode,
             village, ward, khanahead, telephoneNumber, khanatype, religion, ethnicity,
             ownlivingland, ownfarmingland, ownleasegiven, ownpond,
             owngarden, ownhill, ownother, ownlandTotal, otherlivingland, otherfarmingland, otherleasetaken, otherpond, othergarden,
@@ -20,19 +20,19 @@ public class KhanaObject {
             aush, aman, boro, wheat, maize, pulses, oilseeds, potato, tomato, vegetable, sugarcane, jute, farmingsellingtoGovtfixedprice,
             farmingsellingtoPrivatetraders,
             cattle, buffalo, sheep, goat, chicken, egghens, duck, eggsduck,
-            ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others;
+            ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, surveystatus;
 
     ArrayList<MemberObject> members;
     ArrayList<LoanObject> loan;
 
 
 
-    public KhanaObject( String date, String facode, String fauser, String username, String survey_id, String holdingnumber, String khananumber, String lat, String lng, String kinnumber, String division, String district, String upazila, String union, String postcode, String village, String ward, String khanahead, String telephoneNumber, String khanatype, String religion, String ethnicity, String ownlivingland, String ownfarmingland, String ownleasegiven, String ownpond, String owngarden, String ownhill, String ownother, String ownlandTotal, String otherlivingland, String otherfarmingland, String otherleasetaken, String otherpond, String othergarden, String otherhill, String otherlandother, String otherlandTotal, String isNotLandDivided, String[] housetype, String[] watersupply, String[] sanitation, String iselectricity, String typeofelectricity, String businesstype, String businessname, String businesssourcesoffinance, String tradelicensemumber, String tradelicensemumberimage, String businessAddress, String businessStartYear, String businessStartMonth, String businessStartDay, String industryowner, String typeofindustry, String industsourcesoffinance, String formofownership, String ifricemilling, String riceMillProductionCapacity, String typeofricemilled, String isricemilledOwn, String interestedingovtfixedrate, String iftruckbusiness, String vehicletype, String numberoftrucks, String trucktotalcapacity, String trucksourceoffinance, String istruckowned, String interestdrivingtrucksforgovt, String interestofsecurities, String incomefromhouseproperty, String incomefromagricultural, String capitalgain, String incomefromaothersources, String aush, String aman, String boro, String wheat, String maize, String pulses, String oilseeds, String potato, String tomato, String vegetable, String sugarcane, String jute, String farmingsellingtoGovtfixedprice, String farmingsellingtoPrivatetraders, String cattle, String buffalo, String sheep, String goat, String chicken, String egghens, String duck, String eggsduck, String ruhi, String catla, String mixedfish, String pangas, String koi, String magur, String tilapia, String shrimp, String prawn, String others, ArrayList<MemberObject> members, ArrayList<LoanObject> loan) {
+    public KhanaObject( String date, String facode, String fauser, String username, String surveyID, String holdingnumber, String khananumber, String lat, String lng, String kinnumber, String division, String district, String upazila, String union, String postcode, String village, String ward, String khanahead, String telephoneNumber, String khanatype, String religion, String ethnicity, String ownlivingland, String ownfarmingland, String ownleasegiven, String ownpond, String owngarden, String ownhill, String ownother, String ownlandTotal, String otherlivingland, String otherfarmingland, String otherleasetaken, String otherpond, String othergarden, String otherhill, String otherlandother, String otherlandTotal, String isNotLandDivided, String[] housetype, String[] watersupply, String[] sanitation, String iselectricity, String typeofelectricity, String businesstype, String businessname, String businesssourcesoffinance, String tradelicensemumber, String tradelicensemumberimage, String businessAddress, String businessStartYear, String businessStartMonth, String businessStartDay, String industryowner, String typeofindustry, String industsourcesoffinance, String formofownership, String ifricemilling, String riceMillProductionCapacity, String typeofricemilled, String isricemilledOwn, String interestedingovtfixedrate, String iftruckbusiness, String vehicletype, String numberoftrucks, String trucktotalcapacity, String trucksourceoffinance, String istruckowned, String interestdrivingtrucksforgovt, String interestofsecurities, String incomefromhouseproperty, String incomefromagricultural, String capitalgain, String incomefromaothersources, String aush, String aman, String boro, String wheat, String maize, String pulses, String oilseeds, String potato, String tomato, String vegetable, String sugarcane, String jute, String farmingsellingtoGovtfixedprice, String farmingsellingtoPrivatetraders, String cattle, String buffalo, String sheep, String goat, String chicken, String egghens, String duck, String eggsduck, String ruhi, String catla, String mixedfish, String pangas, String koi, String magur, String tilapia, String shrimp, String prawn, String others, String surveystatus, ArrayList<MemberObject> members, ArrayList<LoanObject> loan) {
         this.date = date;
         this.facode = facode;
         this.fauser = fauser;
         this.username = username;
-        this.survey_id = survey_id;
+        this.surveyID = surveyID;
         this.holdingnumber = holdingnumber;
         this.khananumber = khananumber;
         this.lat = lat;
@@ -134,6 +134,7 @@ public class KhanaObject {
         this.shrimp = shrimp;
         this.prawn = prawn;
         this.others = others;
+        this.surveystatus = surveystatus;
         this.members = members;
         this.loan = loan;
     }
@@ -170,12 +171,12 @@ public class KhanaObject {
         this.username = username;
     }
 
-    public String getSurvey_id() {
-        return survey_id;
+    public String getSurveyID() {
+        return surveyID;
     }
 
-    public void setSurvey_id(String survey_id) {
-        this.survey_id = survey_id;
+    public void setSurveyID(String surveyID) {
+        this.surveyID = surveyID;
     }
 
     public String getHoldingnumber() {
@@ -984,6 +985,14 @@ public class KhanaObject {
 
     public void setOthers(String others) {
         this.others = others;
+    }
+
+    public String getSurveystatus() {
+        return surveystatus;
+    }
+
+    public void setSurveystatus(String surveystatus) {
+        this.surveystatus = surveystatus;
     }
 
     public ArrayList<MemberObject> getMembers() {
