@@ -61,6 +61,7 @@ public class MyMNAdapter extends RecyclerView.Adapter<MyMNViewHolder> {
                         dataSet.get(position).mothername,
                         dataSet.get(position).gender,
                         dataSet.get(position).isHead,
+                        dataSet.get(position).relationship,
                         dataSet.get(position).bdaydate,
                         dataSet.get(position).bdaymonth,
                         dataSet.get(position).bdayyear,

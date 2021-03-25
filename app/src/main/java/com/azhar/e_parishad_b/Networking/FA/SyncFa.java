@@ -70,9 +70,14 @@ public class SyncFa {
         if (LOGIN.contains("user")) {
             fauser = LOGIN.getString("user", "Data Not Found");
         }
+        System.out.println(fauser);
 
         try {
-            String url = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D="+fauser;
+            String http = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D=";
+            String url = http +fauser;
+            System.out.println(url);
+//            String url = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D=jamil_fsa@email.com";
+
             HttpHandler httpHandler = new HttpHandler();
             json = httpHandler.makeServiceCall(url);
         }catch (Exception e){

@@ -266,7 +266,7 @@ public class Member_Details_One_Activity extends AppCompatActivity {
 
             imageEncoder = new ImageEncoder();
 
-            basestring= imageEncoder.convert(reduceBitmap);
+            basestring= "data:image/jpeg;base64,"+imageEncoder.convert(reduceBitmap);
 //            testTv.setText(basestring);
 
         }

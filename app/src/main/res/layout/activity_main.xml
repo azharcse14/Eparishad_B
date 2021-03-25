@@ -127,9 +127,12 @@
                     <TableRow>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="SN"
                             android:textColor="@color/white"
@@ -137,9 +140,11 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Creation Date"
@@ -150,7 +155,10 @@
 <!--                        <TextView-->
 <!--                            android:layout_width="wrap_content"-->
 <!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_margin="16dp"-->
+<!--                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"-->
 <!--                            android:gravity="center"-->
 <!--                            android:text="Survey ID"-->
 <!--                            android:textColor="@color/white"-->
@@ -158,9 +166,12 @@
 <!--                            android:textStyle="bold" />-->
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Status"
                             android:textColor="@color/white"
@@ -168,9 +179,12 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="400dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Khana Head"
                             android:textColor="@color/white"
@@ -178,9 +192,12 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Holding No"
                             android:textColor="@color/white"
@@ -188,9 +205,12 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Khana No"
                             android:textColor="@color/white"
@@ -198,9 +218,12 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Village"
                             android:textColor="@color/white"
@@ -208,9 +231,12 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Ward"
                             android:textColor="@color/white"
@@ -218,9 +244,25 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="60dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center"
+                            android:text="Sync"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="16dp"
                             android:gravity="center"
                             android:text="Send"
                             android:textColor="@color/white"

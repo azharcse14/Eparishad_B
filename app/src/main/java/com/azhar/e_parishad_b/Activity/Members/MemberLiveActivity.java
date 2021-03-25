@@ -43,7 +43,7 @@ public class MemberLiveActivity extends AppCompatActivity {
     //======================================for db ==========================================================
     SharedPreferences MemberName, BFMG, MRelationWithKh, MDONE, Nationality, VaccinationInfo, Disability, MotherHCI, FamillyPlaning, SocialSaftyNet, TinInformation, Passport, DrivingLicence, Education, EducationDetails, Training, Profession, maritalStatus, PersonalStatusDetails, IncomeDetails, BankDetail, sp, HoldingAdd;
 
-    String name, member_id, bloodgroup, fathername, mothername, gender, isHead,  bdaydate,
+    String name, member_id, bloodgroup, fathername, mothername, gender, isHead, relationship,  bdaydate,
             bdaymonth,   bdayyear,   age,   birthcertificateno,   birthcertificateimage, nationality,   nid,
             nidimage, membervaccine, disability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
             consultingwith, iseligiblecouple, anyfamilyplaning, socialsafetynet, socialsafetynetcardinfo, socialsafetynetcardphoto,
@@ -102,9 +102,10 @@ public class MemberLiveActivity extends AppCompatActivity {
 
         MRelationWithKh = getSharedPreferences("MRelationWithKh", Context.MODE_PRIVATE);
         if (MRelationWithKh.contains("relation")){
-            isHead = MRelationWithKh.getString("relation", "Data Not Found");
+            relationship = MRelationWithKh.getString("relation", "Data Not Found");
         }
 
+        isHead = "0";
         //===================================================================================
 
         MDONE = getSharedPreferences("MDONE", Context.MODE_PRIVATE);
@@ -438,7 +439,7 @@ public class MemberLiveActivity extends AppCompatActivity {
 
         Repository repository = new Repository(getApplicationContext());
 
-        MNEntity mnEntity = new MNEntity(name, member_id, bloodgroup, fathername, mothername, gender, isHead,  bdaydate,
+        MNEntity mnEntity = new MNEntity(name, member_id, bloodgroup, fathername, mothername, gender, isHead, relationship,  bdaydate,
                 bdaymonth,   bdayyear,   age,   birthcertificateno,   birthcertificateimage, nationality,   nid,
                 nidimage, membervaccine, disability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
                 consultingwith, iseligiblecouple, anyfamilyplaning, socialsafetynet, socialsafetynetcardinfo, socialsafetynetcardphoto,
@@ -450,7 +451,7 @@ public class MemberLiveActivity extends AppCompatActivity {
                 accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage, kinnumber);
         repository.InsertTaskMNEntity(mnEntity);
 
-        MemberTempEntity memberTempEntity = new MemberTempEntity(name, member_id, bloodgroup, fathername, mothername, gender, isHead,  bdaydate,
+        MemberTempEntity memberTempEntity = new MemberTempEntity(name, member_id, bloodgroup, fathername, mothername, gender, isHead, relationship,  bdaydate,
                 bdaymonth,   bdayyear,   age,   birthcertificateno,   birthcertificateimage, nationality,   nid,
                 nidimage, membervaccine, disability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
                 consultingwith, iseligiblecouple, anyfamilyplaning, socialsafetynet, socialsafetynetcardinfo, socialsafetynetcardphoto,

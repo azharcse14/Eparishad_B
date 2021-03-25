@@ -14,7 +14,6 @@ import com.azhar.e_parishad_b.R;
 public class MyTopViewHolder extends RecyclerView.ViewHolder {
     TextView snTv, creationDateTv, surveyIDTv, statusTv, khanaHeadTv, holdingNoTv, khanaNoTv, villageTv, wardTv, syncTv;
     Button send;
-    LinearLayout custom_toast_layout;
 
     public MyTopViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -30,6 +29,5 @@ public class MyTopViewHolder extends RecyclerView.ViewHolder {
         wardTv = itemView.findViewById(R.id.wardTv);
         syncTv = itemView.findViewById(R.id.syncTv);
         send = itemView.findViewById(R.id.sendBtn);
-        custom_toast_layout = itemView.findViewById(R.id.custom_toast_layout);
     }
 }

@@ -127,7 +127,7 @@ public class PassportActivity extends AppCompatActivity {
 
             imageEncoder = new ImageEncoder();
 
-            basestring = imageEncoder.convert(reduceBitmap);
+            basestring = "data:image/jpeg;base64,"+imageEncoder.convert(reduceBitmap);
 //            testTv.setText(basestring);
 
         }
