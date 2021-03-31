@@ -28,6 +28,9 @@ public interface DAO {
     @Update
     void updateTask(FDEntity fdEntity);
 
+    @Query("UPDATE FDEntity SET isSync= '1' WHERE id = :id")
+    void updateIsSync(int id);
+
     @Delete
     void deleteTask(FDEntity fdEntity);
 

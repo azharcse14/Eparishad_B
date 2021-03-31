@@ -17,14 +17,14 @@ import java.util.List;
 
 public class Repository {
 
-    private final Database database;
+    private final DATABASE database;
     Context context;
     String DB_NAME;
 
     public Repository(Context context){
         this.context = context;
         DB_NAME = "final.db";
-        database = Room.databaseBuilder(context, Database.class, DB_NAME).build();
+        database = Room.databaseBuilder(context, DATABASE.class, DB_NAME).build();
 
         Toast.makeText(context, "Database created", Toast.LENGTH_LONG).show();
 
@@ -52,6 +52,20 @@ public class Repository {
             @Override
             protected Void doInBackground(Void... voids) {
                 database.dao().updateTask(fdEntity);
+                return null;
+            }
+        }.execute();
+    }
+    //===============Update Task End=================
+
+    //===============Update Task Start=================
+
+    public void UpdateIsSync(int id){
+        new AsyncTask<Void, Void, Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().updateIsSync(id);
                 return null;
             }
         }.execute();

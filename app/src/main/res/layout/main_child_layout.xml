@@ -14,7 +14,7 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:stretchColumns="1,2,3,4,5,6,7,8,9">
+            android:stretchColumns="1,2,3,4,5,6,7,8,9,10">
 
             <TableRow>
 
@@ -126,18 +126,6 @@
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/syncTv"
-                    android:layout_width="60dp"
-                    android:layout_height="45dp"
-                    android:background="@color/white"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginEnd="1dp"
-                    android:gravity="center"
-                    android:text="Sync"
-                    android:textColor="#F44336"
-                    android:textSize="24sp" />
-
                 <Button
                     android:id="@+id/sendBtn"
                     android:layout_width="150dp"
@@ -148,6 +136,18 @@
                     android:text="Send"
                     android:textColor="#F44336"
                     android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/doneTv"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:gravity="center"
+                    android:text="Done"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
 
             </TableRow>
 

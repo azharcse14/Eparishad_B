@@ -16,7 +16,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.azhar.e_parishad_b.Activity.MainActivity;
 import com.azhar.e_parishad_b.Database.Entity.FDEntity;
+import com.azhar.e_parishad_b.Database.FinalDatabase.Repository;
 import com.azhar.e_parishad_b.Database.SQLiteHelper;
 import com.azhar.e_parishad_b.Networking.EPNET.DataObject.KhanaObject;
 import com.azhar.e_parishad_b.Networking.EPNET.DataObject.LoanObject;
@@ -63,7 +65,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
             ruhi, catla, mixedfish, pangas, koi, magur, tilapia, shrimp, prawn, others, surveystatus;
 
 
-    String membername, member_id, bloodgroup, fathername, mothername, gender, relationship, bdaydate,
+    String membername, member_id, bloodgroup, fathername, mothername, gender, isHead, relationship, bdaydate,
             bdaymonth, bdayyear, age, birthcertificateno, birthcertificateimage, nationality, nid,
             nidimage, membervaccine, disability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
             consultingwith, iseligiblecouple, anyfamilyplaning, socialsafetynet, socialsafetynetcardinfo, socialsafetynetcardphoto,
@@ -129,13 +131,13 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
         TextView wardTv = holder.wardTv;
         wardTv.setText(dataSet.get(position).ward + "");
 
-        TextView syncTv = holder.syncTv;
-        syncTv.setText(dataSet.get(position).isSync + "");
-
         Button send = holder.send;
 
-        if (dataSet.get(position).isSync.equals(0)) {
+        TextView doneTv = holder.done;
+
+        if (dataSet.get(position).isSync.equals("0")) {
             send.setVisibility(View.VISIBLE);
+            doneTv.setVisibility(View.GONE);
 
             send.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -275,66 +277,67 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                             fathername = cursor.getString(4);
                             mothername = cursor.getString(5);
                             gender = cursor.getString(6);
-                            relationship = cursor.getString(7);
-                            bdaydate = cursor.getString(8);
-                            bdaymonth = cursor.getString(9);
-                            bdayyear = cursor.getString(10);
-                            age = cursor.getString(11);
-                            birthcertificateno = cursor.getString(12);
-                            birthcertificateimage = cursor.getString(13);
-                            nationality = cursor.getString(14);
-                            nid = cursor.getString(15);
-                            nidimage = cursor.getString(16);
-                            membervaccine = cursor.getString(16);
-                            disability = cursor.getString(18);
-                            ismothervaccination = cursor.getString(19);
-                            nearesthospital = cursor.getString(20);
-                            maternitynutritionconsultancy = cursor.getString(21);
-                            consultingwith = cursor.getString(22);
-                            iseligiblecouple = cursor.getString(23);
-                            anyfamilyplaning = cursor.getString(24);
-                            socialsafetynet = cursor.getString(25);
-                            socialsafetynetcardinfo = cursor.getString(26);
-                            socialsafetynetcardphoto = cursor.getString(27);
-                            isTinAvaiable = cursor.getString(28);
-                            tinNumber = cursor.getString(29);
-                            tinimage = cursor.getString(30);
-                            passportno = cursor.getString(31);
-                            passportimage = cursor.getString(32);
-                            isDrivingLicenceAvailable = cursor.getString(33);
-                            drivingLicenceNumber = cursor.getString(34);
-                            dirivinglicenseimage = cursor.getString(35);
-                            higheshtEducation = cursor.getString(36);
-                            doyoustudynow = cursor.getString(37);
-                            whichLevel = cursor.getString(38);
-                            educationinstitution = cursor.getString(39);
-                            educationFinishingWant = cursor.getString(40);
-                            training = cursor.getString(41);
-                            primaryprofession = cursor.getString(42);
-                            secondaryprofession = cursor.getString(43);
-                            ifunemployednow = cursor.getString(44);
-                            rickformofownership = cursor.getString(45);
-                            ricksourcesoffinance = cursor.getString(46);
-                            ricknooftransport = cursor.getString(47);
-                            maritialstatus = cursor.getString(48);
-                            marriageRegNo = cursor.getString(49);
-                            marriageRegDate = cursor.getString(50);
-                            divorceRegNo = cursor.getString(51);
-                            divorceRegDate = cursor.getString(52);
-                            incomefromMainOccuption = cursor.getString(53);
-                            incomefromSecondOccuption = cursor.getString(54);
-                            additionalincome = cursor.getString(55);
-                            mobaileNumber = cursor.getString(56);
-                            email = cursor.getString(57);
-                            accountNo = cursor.getString(58);
-                            mobaileNo = cursor.getString(59);
-                            bankName = cursor.getString(60);
-                            branchName = cursor.getString(61);
-                            ismemberlivehere = cursor.getString(62);
-                            mlivingAddress = cursor.getString(63);
-                            memberimage = cursor.getString(64);
+                            isHead = cursor.getString(7);
+                            relationship = cursor.getString(8);
+                            bdaydate = cursor.getString(9);
+                            bdaymonth = cursor.getString(10);
+                            bdayyear = cursor.getString(11);
+                            age = cursor.getString(12);
+                            birthcertificateno = cursor.getString(13);
+                            birthcertificateimage = cursor.getString(14);
+                            nationality = cursor.getString(15);
+                            nid = cursor.getString(16);
+                            nidimage = cursor.getString(17);
+                            membervaccine = cursor.getString(18);
+                            disability = cursor.getString(19);
+                            ismothervaccination = cursor.getString(20);
+                            nearesthospital = cursor.getString(21);
+                            maternitynutritionconsultancy = cursor.getString(22);
+                            consultingwith = cursor.getString(23);
+                            iseligiblecouple = cursor.getString(24);
+                            anyfamilyplaning = cursor.getString(25);
+                            socialsafetynet = cursor.getString(26);
+                            socialsafetynetcardinfo = cursor.getString(27);
+                            socialsafetynetcardphoto = cursor.getString(28);
+                            isTinAvaiable = cursor.getString(29);
+                            tinNumber = cursor.getString(30);
+                            tinimage = cursor.getString(31);
+                            passportno = cursor.getString(32);
+                            passportimage = cursor.getString(33);
+                            isDrivingLicenceAvailable = cursor.getString(34);
+                            drivingLicenceNumber = cursor.getString(35);
+                            dirivinglicenseimage = cursor.getString(36);
+                            higheshtEducation = cursor.getString(37);
+                            doyoustudynow = cursor.getString(38);
+                            whichLevel = cursor.getString(39);
+                            educationinstitution = cursor.getString(40);
+                            educationFinishingWant = cursor.getString(41);
+                            training = cursor.getString(42);
+                            primaryprofession = cursor.getString(43);
+                            secondaryprofession = cursor.getString(44);
+                            ifunemployednow = cursor.getString(45);
+                            rickformofownership = cursor.getString(46);
+                            ricksourcesoffinance = cursor.getString(47);
+                            ricknooftransport = cursor.getString(48);
+                            maritialstatus = cursor.getString(49);
+                            marriageRegNo = cursor.getString(50);
+                            marriageRegDate = cursor.getString(51);
+                            divorceRegNo = cursor.getString(52);
+                            divorceRegDate = cursor.getString(53);
+                            incomefromMainOccuption = cursor.getString(54);
+                            incomefromSecondOccuption = cursor.getString(55);
+                            additionalincome = cursor.getString(56);
+                            mobaileNumber = cursor.getString(57);
+                            email = cursor.getString(58);
+                            accountNo = cursor.getString(59);
+                            mobaileNo = cursor.getString(60);
+                            bankName = cursor.getString(61);
+                            branchName = cursor.getString(62);
+                            ismemberlivehere = cursor.getString(63);
+                            mlivingAddress = cursor.getString(64);
+                            memberimage = cursor.getString(65);
 
-                            memberObject = new MemberObject(membername, member_id, bloodgroup, fathername, mothername, gender, relationship, bdaydate,
+                            memberObject = new MemberObject(membername, member_id, bloodgroup, fathername, mothername, gender, isHead, relationship, bdaydate,
                                     bdaymonth, bdayyear, age, birthcertificateno, birthcertificateimage, nationality, nid,
                                     nidimage, arrOfMemberVaccine, arrOfDisability, ismothervaccination, nearesthospital, maternitynutritionconsultancy,
                                     consultingwith, iseligiblecouple, anyfamilyplaning, arrOfSocialSafetyNet, socialsafetynetcardinfo, socialsafetynetcardphoto,
@@ -380,7 +383,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
 
                     }
 
-                    Retrofit retrofit = new Retrofit.Builder().baseUrl("http://103.147.182.110:5100")
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl("http://103.147.182.110:5030")
                             .addConverterFactory(GsonConverterFactory.create())
                             .build();
 
@@ -467,11 +470,15 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                             toast.setView(successfulLayout);//setting the view of custom toast layout
                             toast.show();
 
-                            Cursor cursor = sqLiteHelper.updataIsSync(dataSet.get(position).kinnumber);
+                            Repository repository = new Repository(context);
+                            repository.UpdateIsSync(dataSet.get(position).id);
 
                             memberObjectArrayList.clear();
                             loanObjectArrayList.clear();
                             System.out.println(response);
+
+                            Intent intent = new Intent(context, MainActivity.class);
+                            context.startActivity(intent);
                         }
 
                         @Override
@@ -492,7 +499,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
             });
         } else {
             send.setVisibility(View.GONE);
-//            wardTv.setVisibility(View.VISIBLE);
+            doneTv.setVisibility(View.VISIBLE);
         }
     }
 

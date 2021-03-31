@@ -73,7 +73,7 @@ public class SyncFa {
         System.out.println(fauser);
 
         try {
-            String http = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D=";
+            String http = "http://103.147.182.110:5030/khanas?filter%5Bfauser%5D=";
             String url = http +fauser;
             System.out.println(url);
 //            String url = "http://103.147.182.110:5100/khanas?filter%5Bfauser%5D=jamil_fsa@email.com";

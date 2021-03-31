@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.azhar.e_parishad_b.R;
 
 public class MyTopViewHolder extends RecyclerView.ViewHolder {
-    TextView snTv, creationDateTv, surveyIDTv, statusTv, khanaHeadTv, holdingNoTv, khanaNoTv, villageTv, wardTv, syncTv;
+    TextView snTv, creationDateTv, surveyIDTv, statusTv, khanaHeadTv, holdingNoTv, khanaNoTv, villageTv, wardTv, done;
     Button send;
 
     public MyTopViewHolder(@NonNull View itemView) {
@@ -27,7 +27,7 @@ public class MyTopViewHolder extends RecyclerView.ViewHolder {
         khanaNoTv = itemView.findViewById(R.id.khanaNoTv);
         villageTv = itemView.findViewById(R.id.villageTv);
         wardTv = itemView.findViewById(R.id.wardTv);
-        syncTv = itemView.findViewById(R.id.syncTv);
         send = itemView.findViewById(R.id.sendBtn);
+        done = itemView.findViewById(R.id.doneTv);
     }
 }

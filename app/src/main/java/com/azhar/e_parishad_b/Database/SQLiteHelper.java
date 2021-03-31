@@ -44,15 +44,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         System.out.println(para);
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         String[] scripts = new String [] {para};
-
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM LoanEntity b where b.kinnumber = ?",scripts,null);
         return cursor;
     }
 
-    public Cursor updataIsSync(String para){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        String[] scripts = new String [] {para};
-        Cursor cursor = sqLiteDatabase.rawQuery("Update FDEntity Set isSync = 1 where kinnumber = ?",scripts,null);
-        return cursor;
-    }
 }

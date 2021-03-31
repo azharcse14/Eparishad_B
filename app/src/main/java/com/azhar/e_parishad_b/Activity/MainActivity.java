@@ -38,10 +38,6 @@ public class MainActivity extends AppCompatActivity {
     TextView totalCountTv;
     int totalCount;
 
-    String urlAddress = "http://103.147.182.110:5100/khanas";
-
-    String fauser = "wasifa_fsa@email.com";
-
     //==========================================
     RecyclerView recyclerViewfd, recyclerViewfa ;
     RecyclerView.LayoutManager layoutManager;
@@ -61,15 +57,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewfd = findViewById(R.id.mainRecyclerViewId);
 
 
-        totalCount = 0;
+        totalCount = 10;
 
-//        totalCount = fdEntityArrayList.size();
 
-//        if (dataSet.size() == 1){
-//            totalCount = dataSet.size();
-//        }
 
         totalCountTv.setText(String.valueOf(totalCount));
+
 
         //===================== RecyclerView =========================
 
