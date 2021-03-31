@@ -57,8 +57,6 @@ public class FSAActivity extends AppCompatActivity {
         //=-===============================================================
 
 //        SyncFa syncFa = new SyncFa(getApplicationContext());
-        startService(new Intent(this, Service.class));
-
 
         totalCount = 0;
 

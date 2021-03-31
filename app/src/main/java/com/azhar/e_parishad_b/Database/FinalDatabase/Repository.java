@@ -26,7 +26,7 @@ public class Repository {
         DB_NAME = "final.db";
         database = Room.databaseBuilder(context, DATABASE.class, DB_NAME).build();
 
-        Toast.makeText(context, "Database created", Toast.LENGTH_LONG).show();
+//        Toast.makeText(context, "Database created", Toast.LENGTH_LONG).show();
 
     }
 
@@ -149,7 +149,7 @@ public class Repository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, mnEntity.name+"is inserted", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, mnEntity.name+"is inserted", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }
@@ -218,7 +218,7 @@ public class Repository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, memberTempEntity.name+"is inserted", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, memberTempEntity.name+"is inserted", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }
@@ -273,7 +273,7 @@ public class Repository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, loanEntity.loanName+"is inserted", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, loanEntity.loanName+"is inserted", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }
@@ -343,7 +343,7 @@ public class Repository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, loanTempEntity.id+"is inserted", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, loanTempEntity.id+"is inserted", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }
@@ -372,7 +372,7 @@ public class Repository {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, faEntity.id+" is inserted", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, faEntity.id+" is inserted", Toast.LENGTH_LONG).show();
             }
         }.execute();
     }

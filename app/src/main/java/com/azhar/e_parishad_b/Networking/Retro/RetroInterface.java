@@ -6,6 +6,6 @@ import retrofit2.http.POST;
 
 public interface RetroInterface {
 
-    @POST("/khanas")
+    @POST("/mobilekhana")
     Call<DataSet> PostData(@Body DataSet dataSet);
 }

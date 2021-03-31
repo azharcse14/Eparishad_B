@@ -118,7 +118,7 @@ public class SyncFa {
                         String ward = jsonArray.getJSONObject(i).getString("ward");
 
 //                        fdRepository = new DayRepository(context);
-                        FaEntity faEntity = new FaEntity(id, date, surveyID, surveystatus, khanahead, holdingnumber, khananumber, village, ward,isDraft);
+                        FaEntity faEntity = new FaEntity(date, surveyID, surveystatus, khanahead, holdingnumber, khananumber, village, ward,isDraft);
                         repository.InsertTaskFaEntity(faEntity);
 
 

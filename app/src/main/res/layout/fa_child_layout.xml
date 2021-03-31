@@ -12,58 +12,71 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1,2,3,4,5,6,7,8,9">
+            android:stretchColumns="1,2,3,4,5,6,7,8">
 
             <TableRow>
 
-
                 <TextView
                     android:id="@+id/snTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="SN"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"/>
 
                 <TextView
                     android:id="@+id/creationDateTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Creation Date"
                     android:textColor="@color/black"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"/>
+
 
                 <TextView
                     android:id="@+id/surveyIDTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Survey ID"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/statusTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:gravity="center"
-                    android:text="Status"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
+<!--                <TextView-->
+<!--                    android:id="@+id/statusTv"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Status"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="24sp" />-->
 
                 <TextView
                     android:id="@+id/khanaHeadTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Khana Head"
                     android:textColor="@color/black"
@@ -71,9 +84,12 @@
 
                 <TextView
                     android:id="@+id/holdingNoTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Holding No"
                     android:textColor="@color/black"
@@ -81,9 +97,12 @@
 
                 <TextView
                     android:id="@+id/khanaNoTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Khana No"
                     android:textColor="@color/black"
@@ -91,9 +110,12 @@
 
                 <TextView
                     android:id="@+id/villageTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Village"
                     android:textColor="@color/black"
@@ -101,25 +123,16 @@
 
                 <TextView
                     android:id="@+id/wardTv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Ward"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/syncTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
-
-
             </TableRow>
 
         </TableLayout>

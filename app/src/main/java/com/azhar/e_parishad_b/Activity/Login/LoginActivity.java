@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     String email, password;
     ProgressBar loading;
 
-    final String URL_LOGIN = "http://103.147.182.110:5100/authentication";
+    final String URL_LOGIN = "http://103.147.182.110:5030/authentication";
 
 
     @Override

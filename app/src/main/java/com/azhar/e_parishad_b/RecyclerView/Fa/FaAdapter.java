@@ -48,9 +48,6 @@ public class FaAdapter extends RecyclerView.Adapter<FaViewHolder> {
         TextView surveyIDTv = holder.surveyIDTv;
         surveyIDTv.setText(dataSet.get(position).surveyId+"");
 
-        TextView statusTv = holder.statusTv;
-        statusTv.setText(dataSet.get(position).id+"");
-
         TextView khanaHeadTv = holder.khanaHeadTv;
         khanaHeadTv.setText(dataSet.get(position).khanahead+"");
 

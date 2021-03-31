@@ -17,12 +17,10 @@ public class FaViewHolder  extends RecyclerView.ViewHolder {
         snTv = itemView.findViewById(R.id.snTv);
         creationDateTv = itemView.findViewById(R.id.creationDateTv);
         surveyIDTv = itemView.findViewById(R.id.surveyIDTv);
-        statusTv = itemView.findViewById(R.id.statusTv);
         khanaHeadTv = itemView.findViewById(R.id.khanaHeadTv);
         holdingNoTv = itemView.findViewById(R.id.holdingNoTv);
         khanaNoTv = itemView.findViewById(R.id.khanaNoTv);
         villageTv = itemView.findViewById(R.id.villageTv);
         wardTv = itemView.findViewById(R.id.wardTv);
-        syncTv = itemView.findViewById(R.id.syncTv);
     }
 }

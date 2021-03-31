@@ -23,6 +23,7 @@ import com.azhar.e_parishad_b.Database.Entity.FDEntity;
 import com.azhar.e_parishad_b.Database.Entity.FaEntity;
 import com.azhar.e_parishad_b.Database.FinalDatabase.Repository;
 import com.azhar.e_parishad_b.Database.Entity.Member.MNEntity;
+import com.azhar.e_parishad_b.Networking.EPNET.Service;
 import com.azhar.e_parishad_b.Networking.FA.MyWorker;
 import com.azhar.e_parishad_b.R;
 import com.azhar.e_parishad_b.RecyclerView.Fa.FaAdapter;
@@ -62,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         totalCountTv.setText(String.valueOf(totalCount));
+
+        //============================= Fsa Data Loader4=====================================
+
+        try {
+            startService(new Intent(this, Service.class));
+        }catch (Exception e){
+
+        }
 
 
         //===================== RecyclerView =========================

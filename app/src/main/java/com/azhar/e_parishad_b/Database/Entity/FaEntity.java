@@ -8,8 +8,8 @@ import androidx.room.PrimaryKey;
 @Entity
 public class FaEntity {
     @NonNull
-    @PrimaryKey(autoGenerate = false)
-    public String id;
+    @PrimaryKey(autoGenerate = true)
+    public int id;
 
     @ColumnInfo(name = "date")
     public String date;
@@ -40,8 +40,7 @@ public class FaEntity {
 
 
 
-    public FaEntity(String id, String date, String surveyId, String status, String khanahead, String holdingnumber, String khananumber, String village, String ward, String isDraft) {
-        this.id = id;
+    public FaEntity(String date, String surveyId, String status, String khanahead, String holdingnumber, String khananumber, String village, String ward, String isDraft) {
         this.date = date;
         this.surveyId = surveyId;
         this.status = status;
