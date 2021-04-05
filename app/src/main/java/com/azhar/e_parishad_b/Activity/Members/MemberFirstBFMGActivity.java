@@ -70,7 +70,7 @@ public class MemberFirstBFMGActivity extends AppCompatActivity {
             ((RadioButton) ((RadioGroup) findViewById(R.id.genderRG)).getChildAt(i)).setChecked(true);
         }
         else {
-            Toast.makeText(getApplicationContext(), "Empty", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "Empty", Toast.LENGTH_LONG).show();
         }
 
         //================= RecyclerView =====================

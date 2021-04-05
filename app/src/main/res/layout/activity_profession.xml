@@ -34,7 +34,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -54,7 +55,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -77,13 +79,14 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:text="Primary Profession"
+                        android:text="@string/primary_profession"
                         android:textColor="@color/black"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -92,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:hint="Select Primary Profession"
+                        android:hint="@string/select_primary_profession"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                         <AutoCompleteTextView
@@ -100,7 +103,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none"
-                            android:textColor="#000"/>
+                            android:textColor="#000"
+                            tools:ignore="LabelFor" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:text="Secondary Profession*"
+                        android:text="@string/secondary_profession"
                         android:textColor="@color/black"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -117,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:hint="Select Secondary Profession"
+                        android:hint="@string/select_secondary_profession"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                         <AutoCompleteTextView
@@ -125,7 +129,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none"
-                            android:textColor="#000"/>
+                            android:textColor="#000"
+                            tools:ignore="LabelFor" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,13 +139,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:text="If unemployed now"/>
+                        android:text="@string/if_unemployed_now"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
-                        android:text="Rikshaw/Van pulling detail"
+                        android:text="@string/rikshaw_van_pulling_detail"
                         android:textColor="@color/black"
                         android:textSize="26sp"
                         android:textStyle="bold" />
@@ -149,7 +154,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Form of ownership">
+                        android:hint="@string/form_of_ownership">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/fooEtId"
@@ -164,7 +169,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Source of finance">
+                        android:hint="@string/source_of_finance">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/sofEtId"
@@ -180,7 +185,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="42dp"
-                        android:hint="Number of transport">
+                        android:hint="@string/number_of_transport">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/notEtId"
@@ -200,7 +205,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -210,7 +215,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

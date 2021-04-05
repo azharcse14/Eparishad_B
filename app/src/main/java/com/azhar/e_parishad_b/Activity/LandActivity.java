@@ -8,18 +8,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.azhar.e_parishad_b.Activity.Loan.LoanActivity;
 import com.azhar.e_parishad_b.R;
 import com.azhar.e_parishad_b.RecyclerView.SideMenue.MyAdapter;
 
@@ -93,7 +87,7 @@ public class LandActivity extends AppCompatActivity {
             otherLandNOlSp = spOtherLand.getString("otherLandNOl", "Data Not Found");
             otherLandNOlEt.setText(otherLandNOlSp);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         SharedPreferences sp = getSharedPreferences("OwnLand", Context.MODE_PRIVATE);
@@ -123,7 +117,7 @@ public class LandActivity extends AppCompatActivity {
             otherLandOlSp = sp.getString("otherLandOlAdd", "Data Not Found");
             otherLandOlEt.setText(otherLandOlSp);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 
@@ -135,7 +129,7 @@ public class LandActivity extends AppCompatActivity {
                 landhasnotbeendividedyetCB.setChecked(true);
             }
         } else {
-            Toast.makeText(getApplicationContext(), "Empty", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "Empty", Toast.LENGTH_LONG).show();
         }
 
 

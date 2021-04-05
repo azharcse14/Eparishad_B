@@ -55,7 +55,7 @@ public class PersonalStatusDetailActivity extends AppCompatActivity {
             drdEt.setText(drdSp);
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 

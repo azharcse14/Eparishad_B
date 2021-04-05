@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -76,7 +78,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +90,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
-                            android:text="Fisheries Detail (In KG)"
+                            android:text="@string/fisheries_detail_in_kg"
                             android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -114,9 +117,10 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Rui"
+                                        android:text="@string/rui"
                                         android:textColor="@color/black"
-                                        android:textSize="28sp" />
+                                        android:textSize="28sp"
+                                        tools:ignore="TooDeepLayout" />
 
                                     <com.google.android.material.textfield.TextInputLayout
                                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -124,7 +128,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/ruiEt"
@@ -146,7 +150,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Catla"
+                                        android:text="@string/catla"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -156,7 +160,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/catlaEt"
@@ -178,7 +182,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Mixed Fish"
+                                        android:text="@string/mixed_fish"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -188,7 +192,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/mixedFishEt"
@@ -210,7 +214,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Pangas"
+                                        android:text="@string/pangas"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -220,7 +224,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/pangasEt"
@@ -242,7 +246,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Koi"
+                                        android:text="@string/koi"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -252,7 +256,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/koiEt"
@@ -274,7 +278,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Shing/Magur"
+                                        android:text="@string/shing_magur"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -284,7 +288,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/shingEt"
@@ -307,7 +311,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Tilapia/Nilotica"
+                                        android:text="@string/tilapia_nilotica"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -317,7 +321,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/telapiaEt"
@@ -339,7 +343,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Shrimp"
+                                        android:text="@string/shrimp"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -349,7 +353,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/shrimpEt"
@@ -371,7 +375,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Prawn"
+                                        android:text="@string/prawn"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -381,7 +385,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/prawnEt"
@@ -403,7 +407,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Others"
+                                        android:text="@string/others"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -413,7 +417,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/othersEt"
@@ -433,7 +437,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
-                                        android:text="Previous"
+                                        android:text="@string/previous"
                                         android:onClick="goToPreviousActivity"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -443,7 +447,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
-                                        android:text="Next"
+                                        android:text="@string/next"
                                         android:onClick="goToNextActivity"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"

@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -75,7 +77,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -86,7 +89,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
-                            android:text="LiveStock Detail(In Qnty)"
+                            android:text="@string/livestock_detail_in_qnty"
                             android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -113,9 +116,10 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Cattle"
+                                        android:text="@string/cattle"
                                         android:textColor="@color/black"
-                                        android:textSize="28sp" />
+                                        android:textSize="28sp"
+                                        tools:ignore="TooDeepLayout" />
 
                                     <com.google.android.material.textfield.TextInputLayout
                                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -123,7 +127,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/cattleEt"
@@ -145,7 +149,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Buffalo"
+                                        android:text="@string/buffalo"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -155,7 +159,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/buffaloEt"
@@ -177,7 +181,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Sheep"
+                                        android:text="@string/sheep"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -187,7 +191,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/sheepEt"
@@ -209,7 +213,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Goat"
+                                        android:text="@string/goat"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -219,7 +223,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/goatEt"
@@ -241,7 +245,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Chicken"
+                                        android:text="@string/chicken"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -251,7 +255,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/chickenEt"
@@ -273,7 +277,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Egg(Hens)"
+                                        android:text="@string/egg_hens"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -283,7 +287,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/eggHensEt"
@@ -306,7 +310,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Duck"
+                                        android:text="@string/duck"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -316,7 +320,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/duckEt"
@@ -338,7 +342,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Eggs(Duck)"
+                                        android:text="@string/eggs_duck"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -348,7 +352,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/eggsDuckEt"
@@ -367,7 +371,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
-                                        android:text="Previous"
+                                        android:text="@string/previous"
                                         android:onClick="goToPreviousActivity"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -377,7 +381,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
-                                        android:text="Next"
+                                        android:text="@string/next"
                                         android:onClick="goToNextActivity"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"

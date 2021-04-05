@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="45dp"
     android:background="@drawable/text_view_border">
@@ -14,7 +15,8 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:stretchColumns="1,2,3,4,5,6,7,8,9,10">
+            android:stretchColumns="1,2,3,4,5,6,7,8,9,10"
+            tools:ignore="UselessParent">
 
             <TableRow>
 
@@ -26,7 +28,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="SN"
+                    android:text="@string/sn"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 
@@ -38,7 +40,7 @@
                     android:layout_marginEnd="1dp"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:text="Creation Date"
+                    android:text="@string/creation_date"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -62,7 +64,7 @@
                     android:layout_marginEnd="1dp"
                     android:background="@color/white"
                     android:gravity="center"
-                    android:text="Status"
+                    android:text="@string/status"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -73,7 +75,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="Khana Head"
+                    android:text="@string/khana_head"
                     android:textColor="@color/black"
                     android:background="@color/white"
                     android:textSize="24sp" />
@@ -85,7 +87,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="Holding No"
+                    android:text="@string/holding_no"
                     android:background="@color/white"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
@@ -98,7 +100,7 @@
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
                     android:background="@color/white"
-                    android:text="Khana No"
+                    android:text="@string/khana_no"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -109,7 +111,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="Village"
+                    android:text="@string/village"
                     android:background="@color/white"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
@@ -121,7 +123,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="Ward"
+                    android:text="@string/ward"
                     android:background="@color/white"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
@@ -133,7 +135,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="Send"
+                    android:text="@string/send"
                     android:textColor="#F44336"
                     android:textSize="24sp" />
 
@@ -144,7 +146,7 @@
                     android:layout_marginStart="1dp"
                     android:layout_marginEnd="1dp"
                     android:gravity="center"
-                    android:text="Done"
+                    android:text="@string/done"
                     android:textColor="@color/white"
                     android:textSize="24sp" />
 

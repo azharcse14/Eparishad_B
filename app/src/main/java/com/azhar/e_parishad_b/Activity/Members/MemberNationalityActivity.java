@@ -72,7 +72,7 @@ public class MemberNationalityActivity extends AppCompatActivity {
             bitmapSp = imageDecoder.convert(basestringSp);
             csImagView.setImageBitmap(bitmapSp);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         //================= RecyclerView =====================
@@ -102,7 +102,7 @@ public class MemberNationalityActivity extends AppCompatActivity {
             nationality = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
 

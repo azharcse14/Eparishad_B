@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -92,7 +95,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Finance Support"
+                                android:text="@string/finance_support"
                                 android:textColor="@color/black"
                                 android:textSize="36sp"
                                 android:textStyle="bold"
@@ -108,7 +111,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Name"
+                                android:text="@string/name"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -120,7 +123,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Name">
+                                android:hint="@string/name">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/loanNameEt"
@@ -133,12 +136,12 @@
                                 android:id="@+id/ifFsCbID"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Finance Support / Loan Taken"/>
+                                android:text="@string/finance_support_loan_taken"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Finance Support Taken From"
+                                android:text="@string/finance_support_taken_from"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -150,7 +153,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Finance Support Taken From">
+                                android:hint="@string/finance_support_taken_from">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/fstfEt"
@@ -162,7 +165,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Institute"
+                                android:text="@string/institute"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -174,7 +177,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Institute">
+                                android:hint="@string/institute">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/instituteEt"
@@ -186,7 +189,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Amount"
+                                android:text="@string/amount"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -198,7 +201,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Amount">
+                                android:hint="@string/amount">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/amountEt"
@@ -213,7 +216,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Business Start Date"
+                                android:text="@string/business_start_date"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -231,7 +234,7 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Day"
+                                    android:hint="@string/day"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
@@ -248,14 +251,13 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Month"
+                                    android:hint="@string/month"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
                                         android:id="@+id/monthAcTv"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:inputType="none"
                                         android:textColor="#000"/>
 
                                 </com.google.android.material.textfield.TextInputLayout>
@@ -265,15 +267,15 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Year"
+                                    android:hint="@string/year"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
                                         android:id="@+id/yearAcTv"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:inputType="none"
-                                        android:textColor="#000"/>
+                                        android:textColor="#000"
+                                        tools:ignore="LabelFor" />
 
                                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -284,7 +286,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Periods"
+                                android:text="@string/periods"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -295,7 +297,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="periods">
+                                android:text="@string/periods">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/periodsEt"
@@ -328,7 +330,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Done"
+                                android:text="@string/done"
                                 android:onClick="goToNextActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"

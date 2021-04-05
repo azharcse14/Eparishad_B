@@ -74,7 +74,7 @@ public class LiveStockDetailActivity extends AppCompatActivity {
             eggsDuckEt.setText(eggsDuckSp);
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         //================= RecyclerView =====================

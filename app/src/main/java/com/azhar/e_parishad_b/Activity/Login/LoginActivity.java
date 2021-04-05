@@ -112,7 +112,6 @@ public class LoginActivity extends AppCompatActivity {
                         System.out.println(usercode);
 
                         if (response != null) {
-                            System.out.println("if S");
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
 
@@ -127,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Please Check Your Internet Connection", Toast.LENGTH_LONG).show();
                 }
             }){
                 @Override

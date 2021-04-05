@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -76,7 +78,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +90,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Nationality"
+                            android:text="@string/nationality"
                             android:textSize="26sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -101,12 +104,12 @@
                             <RadioButton
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Bangladeshi"
+                                android:text="@string/bangladeshi"
                                 android:textSize="20sp"/>
                             <RadioButton
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Non Bangladeshi"
+                                android:text="@string/non_bangladeshi"
                                 android:textSize="20sp"/>
                         </RadioGroup>
 
@@ -114,7 +117,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
-                            android:text="National ID"
+                            android:text="@string/national_id"
                             android:textColor="@color/black"
                             android:textSize="26sp"
                             android:textStyle="bold"
@@ -125,12 +128,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
-                            android:hint="National ID">
+                            android:hint="@string/national_id">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/nationalIdEt"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:inputType="number"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,7 +142,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
-                            android:text="Issuing Authority"
+                            android:text="@string/issuing_authority"
                             android:textColor="@color/black"
                             android:textSize="26sp"
                             android:textStyle="bold"
@@ -147,7 +151,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Election Commission"
+                            android:text="@string/election_commission"
                             android:padding="16dp"
                             android:textColor="@color/black"
                             android:background="@drawable/text_view_border"/>
@@ -171,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
-                            android:text="Photo of the NID"
+                            android:text="@string/photo_of_the_nid"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold"
@@ -189,14 +193,16 @@
                                 android:layout_gravity="center"
                                 android:layout_margin="10dp"
                                 android:onClick="captureImg"
-                                android:src="@drawable/ic_baseline_camera_white_24" />
+                                android:src="@drawable/ic_baseline_camera_white_24"
+                                android:contentDescription="@string/todo" />
 
                             <ImageView
                                 android:id="@+id/bdCaptureIvId"
                                 android:layout_width="0dp"
                                 android:layout_height="200dp"
                                 android:layout_weight="1"
-                                android:background="#40DAD5D5" />
+                                android:background="#40DAD5D5"
+                                android:contentDescription="@string/todo" />
 
                         </LinearLayout>
 
@@ -213,7 +219,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -223,7 +229,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

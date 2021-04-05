@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -76,7 +78,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +90,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Latrine System"
+                            android:text="@string/latrine_system"
                             android:textSize="36sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -97,63 +100,63 @@
                             android:id="@+id/attachedToRoomCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Attached to Room"
+                            android:text="@string/attached_to_room"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/flashSafeCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Flash (Safe)"
+                            android:text="@string/flash_safe"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/flashUnSafeCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Flash (Unsafe)"
+                            android:text="@string/flash_unsafe"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/pitLatrineWithSlabCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Pit-Latrine (with Slab)"
+                            android:text="@string/pit_latrine_with_slab"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/pitLatrineWithOutSlabCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Pit-Latrine (without Slab)"
+                            android:text="@string/pit_latrine_without_slab"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/compotingLatrineCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Compoting Latrine"
+                            android:text="@string/compoting_latrine"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/hangingLatrineCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Hanging Latrine"
+                            android:text="@string/hanging_latrine"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/ecoToiletCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Eco-Toilet"
+                            android:text="@string/eco_toilet"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/otherCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Other"
+                            android:text="@string/other"
                             android:textSize="20sp"/>
                     </LinearLayout>
 
@@ -167,7 +170,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -177,7 +180,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

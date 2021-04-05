@@ -43,7 +43,7 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
         }
 
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         //================= RecyclerView =====================
@@ -68,7 +68,7 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
             marriedRGvalue = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
 

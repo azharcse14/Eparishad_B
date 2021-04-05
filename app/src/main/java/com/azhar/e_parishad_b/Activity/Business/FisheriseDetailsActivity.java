@@ -87,7 +87,7 @@ public class FisheriseDetailsActivity extends AppCompatActivity {
             othersEt.setText(othersSp);
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 

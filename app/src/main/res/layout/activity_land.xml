@@ -36,7 +36,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +57,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -76,7 +78,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +90,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
-                            android:text="Land amount in decimal"
+                            android:text="@string/land_amount_in_decimal"
                             android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -113,10 +116,11 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Own Land"
+                                        android:text="@string/own_land"
                                         android:textColor="@color/black"
                                         android:textSize="30sp"
-                                        android:textStyle="bold" />
+                                        android:textStyle="bold"
+                                        tools:ignore="TooDeepLayout" />
 
                                     <TextView
                                         android:id="@+id/ownLandTv"
@@ -126,7 +130,7 @@
                                         android:layout_weight="1"
                                         android:background="@drawable/text_view_border"
                                         android:padding="8dp"
-                                        android:text="0"
+                                        android:text="@string/zero"
                                         android:textColor="@color/black"
                                         android:textSize="24sp"
                                         android:typeface="normal" />
@@ -143,7 +147,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Living Land"
+                                        android:text="@string/living_land"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp"
                                         android:textColor="@color/black"/>
@@ -154,7 +158,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/livingLandOlEt"
@@ -176,7 +180,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Farming Land"
+                                        android:text="@string/farming_land"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp"/>
@@ -187,7 +191,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/farmingLandOlEt"
@@ -209,7 +213,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Leased Given"
+                                        android:text="@string/leased_given"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp"/>
@@ -220,7 +224,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/leasedGivenEt"
@@ -242,7 +246,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Pond"
+                                        android:text="@string/pond"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -253,7 +257,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/pondOlEt"
@@ -275,7 +279,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Garden"
+                                        android:text="@string/garden"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -286,7 +290,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/gardenOlEt"
@@ -308,7 +312,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Hill"
+                                        android:text="@string/hill"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -319,7 +323,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                         android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/hillOlEt"
@@ -342,7 +346,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Other Land"
+                                        android:text="@string/other_land"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp"/>
@@ -353,7 +357,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/otherLandOlEt"
@@ -369,7 +373,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginEnd="16dp"
-                                    android:text="Total Own Land"
+                                    android:text="@string/total_own_land"
                                     android:onClick="totalOwnLand"
                                     android:backgroundTint="@color/black"/>
 
@@ -391,7 +395,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Not Own Land"
+                                        android:text="@string/not_own_land"
                                         android:textColor="@color/black"
                                         android:textSize="30sp"
                                         android:textStyle="bold" />
@@ -404,7 +408,7 @@
                                         android:layout_weight="1"
                                         android:background="@drawable/text_view_border"
                                         android:padding="8dp"
-                                        android:text="0"
+                                        android:text="@string/zero"
                                         android:textColor="@color/black"
                                         android:textSize="24sp"
                                         android:typeface="normal" />
@@ -421,7 +425,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Living Land"
+                                        android:text="@string/living_land"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -432,7 +436,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/livingLandNolEt"
@@ -455,7 +459,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Farming Land"
+                                        android:text="@string/farming_land"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -466,7 +470,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/farmingLandNolEt"
@@ -488,7 +492,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Leased Taken"
+                                        android:text="@string/leased_taken"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -499,7 +503,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/leasedTakenEt"
@@ -521,7 +525,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Pond"
+                                        android:text="@string/pond"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -532,7 +536,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/pondNolEt"
@@ -554,7 +558,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Garden"
+                                        android:text="@string/garden"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -565,7 +569,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/gardenNolEt"
@@ -587,7 +591,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Hill"
+                                        android:text="@string/hill"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -598,7 +602,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/hillNolEt"
@@ -621,7 +625,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Other Land"
+                                        android:text="@string/other_land"
                                         android:textColor="@color/black"
                                         android:textSize="18sp"
                                         android:layout_marginStart="18dp" />
@@ -631,7 +635,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:hint="0">
+                                        android:hint="@string/zero">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/otherLandNolEt"
@@ -648,7 +652,7 @@
                                         android:layout_marginEnd="16dp"
                                         android:layout_gravity="center"
                                         android:onClick="totalOtherLand"
-                                        android:text="Total Not Own Land"
+                                        android:text="@string/total_not_own_land"
                                         android:backgroundTint="@color/black"/>
 
                                 </LinearLayout>
@@ -658,7 +662,7 @@
                                     android:id="@+id/landhasnotbeendividedyetCB"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Land has not been divided yet"
+                                    android:text="@string/land_has_not_been_divided_yet"
                                     android:textColor="@color/black"
                                     android:textSize="22sp"
                                     android:textStyle="bold" />
@@ -675,7 +679,7 @@
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
                                         android:onClick="goToPreviousActivity"
-                                        android:text="Previous"
+                                        android:text="@string/previous"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent" />
@@ -685,7 +689,7 @@
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
                                         android:onClick="goToNextActivity"
-                                        android:text="Next"
+                                        android:text="@string/next"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent" />

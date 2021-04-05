@@ -33,7 +33,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -53,7 +54,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -85,7 +88,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="House Type"
+                            android:text="@string/house_type"
                             android:textSize="36sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -95,45 +98,45 @@
                                 android:id="@+id/katchaHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Katcha"
+                                android:text="@string/katcha"
                                 android:textSize="20sp"/>
                             <CheckBox
                                 android:id="@+id/pakaHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Paka"
+                                android:text="@string/paka"
                                 android:textSize="20sp"/>
                             <CheckBox
                                 android:id="@+id/semiPakaHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Semi Paka"
+                                android:text="@string/semi_paka"
                                 android:textSize="20sp"/>
 
                             <CheckBox
                                 android:id="@+id/tinerGhorHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Tiner Ghor"
+                                android:text="@string/tiner_ghor"
                                 android:textSize="20sp"/>
 
                             <CheckBox
                                 android:id="@+id/hutHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Hut"
+                                android:text="@string/hut"
                                 android:textSize="20sp"/>
                             <CheckBox
                                 android:id="@+id/bambooHutHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Bamboo Hut"
+                                android:text="@string/bamboo_hut"
                                 android:textSize="20sp"/>
                             <CheckBox
                                 android:id="@+id/otherHtCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Other"
+                                android:text="@string/other"
                                 android:textSize="20sp"/>
 
                     </LinearLayout>
@@ -147,7 +150,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -157,7 +160,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

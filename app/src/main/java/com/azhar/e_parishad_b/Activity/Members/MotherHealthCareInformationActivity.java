@@ -67,7 +67,7 @@ public class MotherHealthCareInformationActivity extends AppCompatActivity {
         }
 
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         //================= RecyclerView =====================
@@ -109,7 +109,7 @@ public class MotherHealthCareInformationActivity extends AppCompatActivity {
             valueNc = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
         try {
@@ -118,7 +118,7 @@ public class MotherHealthCareInformationActivity extends AppCompatActivity {
             valueMc = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
         //================== Shared Preferences ====================

@@ -66,7 +66,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/fragmentContainer"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
@@ -94,7 +93,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Business Detail"
+                                android:text="@string/business_detail"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -121,7 +120,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Type of Business">
+                                android:hint="@string/type_of_business">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/typeOfBusinessET"
@@ -134,7 +133,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Business Name"
+                                android:text="@string/business_name"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -145,7 +144,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Business Name">
+                                android:hint="@string/business_name">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/businessNameEt"
@@ -158,7 +157,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Source of Income"
+                                android:text="@string/source_of_income"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -169,7 +168,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Source of Income">
+                                android:hint="@string/source_of_income">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/sourceOfIncomeEt"
@@ -182,7 +181,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Trade Licence Number"
+                                android:text="@string/trade_licence_number"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -193,7 +192,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Trade Licence Number">
+                                android:hint="@string/trade_licence_number">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/tradeLicenceNumberEt"
@@ -208,7 +207,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="16dp"
                                 android:layout_marginBottom="16dp"
-                                android:text="Photo of the Trade Licence"
+                                android:text="@string/photo_of_the_trade_licence"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -242,7 +241,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginBottom="16dp"
-                                android:text="Business Address"
+                                android:text="@string/business_address"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -253,7 +252,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Business Address">
+                                android:hint="@string/business_address">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/businessAddressEt"
@@ -266,7 +265,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Business Start Date"
+                                android:text="@string/business_start_date"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -283,7 +282,7 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Day"
+                                    android:hint="@string/day"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
@@ -300,7 +299,7 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Month"
+                                    android:hint="@string/month"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
@@ -317,7 +316,7 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Year"
+                                    android:hint="@string/year"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView

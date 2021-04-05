@@ -22,6 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.azhar.e_parishad_b.ImageProcessing.ImageDecoder;
@@ -31,13 +32,17 @@ import com.azhar.e_parishad_b.R;
 import com.azhar.e_parishad_b.RecyclerView.MemberSideMenue.MSMAdapter;
 import com.azhar.e_parishad_b.RecyclerView.SideMenue.MyAdapter;
 
+import java.util.Calendar;
+
 public class Member_Details_One_Activity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ImageView csImagView;
     AutoCompleteTextView dayAcTv, monthAcTv, yearAcTv;
-    EditText ageEt, featEt, inchEt, weightEt, bcIdEt, bpEt, brnIAEt;
+    TextView ageTv;
+    EditText featEt, inchEt, weightEt, bcIdEt, bpEt, brnIAEt;
     String age, feat, inch, weight, bcId, bp, brnIA;
+    int ageC;
     String ageSp, featSp, inchSp, weightSp, bcIdSp, bpSp, brnIASp;
     String [] day, month, year;
     String dayValue, monthValue, yearValue;
@@ -58,7 +63,7 @@ public class Member_Details_One_Activity extends AppCompatActivity {
         dayAcTv = findViewById(R.id.dayAcTv);
         monthAcTv = findViewById(R.id.monthAcTv);
         yearAcTv = findViewById(R.id.yearAcTv);
-        ageEt = findViewById(R.id.ageEt);
+        ageTv = findViewById(R.id.ageTv);
         featEt = findViewById(R.id.featEt);
         inchEt = findViewById(R.id.inchEt);
         weightEt = findViewById(R.id.weightEt);
@@ -84,7 +89,7 @@ public class Member_Details_One_Activity extends AppCompatActivity {
             yearAcTv.setText(yearValueSp);
         }if (sp.contains("age")){
             ageSp = sp.getString("age", "Data Not Found");
-            ageEt.setText(ageSp);
+            ageTv.setText(ageSp);
         }if (sp.contains("feat")){
             featSp = sp.getString("feat", "Data Not Found");
             featEt.setText(featSp);
@@ -164,6 +169,12 @@ public class Member_Details_One_Activity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 yearValue = parent.getItemAtPosition(position).toString();
+
+                int year = Calendar.getInstance().get(Calendar.YEAR);
+
+                ageC = year - Integer.parseInt(yearValue);
+
+                ageTv.setText(String.valueOf(ageC));
             }
         });
 
@@ -176,10 +187,10 @@ public class Member_Details_One_Activity extends AppCompatActivity {
 
     public void goToNextActivity(View view) {
 
-        if (ageEt.getText().toString().isEmpty()) {
+        if (age == ""){
             age = "0";
-        } else {
-            age = ageEt.getText().toString().trim();
+        }else {
+            age = String.valueOf(ageC);
         }
 
         if (featEt.getText().toString().isEmpty()) {

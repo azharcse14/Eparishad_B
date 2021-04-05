@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -76,7 +78,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +90,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Has any of the following trainings?"
+                            android:text="@string/has_any_of_the_following_trainings"
                             android:textSize="26sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -97,27 +100,27 @@
                             android:id="@+id/agricultureCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Agriculture"
+                            android:text="@string/agriculture"
                             android:textSize="20sp"/>
                         <CheckBox
                             android:id="@+id/veterinaryCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Veterinary"
+                            android:text="@string/veterinary"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/sewingCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sewing"
+                            android:text="@string/sewing"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/ictCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ICT"
+                            android:text="@string/ict"
                             android:textSize="20sp"/>
 
 <!--                        <CheckBox-->
@@ -172,7 +175,7 @@
                             android:id="@+id/otherCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Other"
+                            android:text="@string/other"
                             android:textSize="20sp"/>
                     </LinearLayout>
 
@@ -184,7 +187,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -194,7 +197,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

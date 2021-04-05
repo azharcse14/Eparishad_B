@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.azhar.e_parishad_b.Database.Entity.Loan.LoanTempEntity;
 import com.azhar.e_parishad_b.Database.FinalDatabase.Repository;
@@ -104,6 +105,11 @@ public class FinanceSupportActivity extends AppCompatActivity {
         String[] title = getResources().getStringArray(R.array.title);
         MyAdapter adapter = new MyAdapter(this, title);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "Please complete the survey", Toast.LENGTH_LONG).show();
     }
 
     public void goToNextActivity(View view) {

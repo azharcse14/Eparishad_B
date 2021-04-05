@@ -62,7 +62,7 @@ public class EducationDetailsActivity extends AppCompatActivity {
             educationFinishingSp = sp.getString("educationFinishing", "Data Not Found");
             educationFinishingEt.setText(educationFinishingSp);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         //======================= Spinner =============================
@@ -102,7 +102,7 @@ public class EducationDetailsActivity extends AppCompatActivity {
             studyNowRGvalue = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
         if (educationalInstitutionEt.getText().toString().isEmpty()) {

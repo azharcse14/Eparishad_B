@@ -36,7 +36,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +57,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -91,7 +94,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Member Name"
+                                android:text="@string/member_name"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -103,7 +106,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Member Name">
+                                android:hint="@string/member_name">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/memberNameEt"
@@ -118,7 +121,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="6dp"
-                                android:text="Father's Name"
+                                android:text="@string/father_s_name"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold" />
@@ -128,7 +131,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="36dp"
-                                android:hint="Father's Name">
+                                android:hint="@string/father_s_name">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/fatherNameEtId"
@@ -143,7 +146,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="6dp"
-                                android:text="Mother's Name"
+                                android:text="@string/mother_s_name"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold" />
@@ -153,7 +156,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="36dp"
-                                android:hint="Mother's Name">
+                                android:hint="@string/mother_s_name">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/motherNameEtId"
@@ -169,7 +172,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="6dp"
-                                android:text="Blood Group"
+                                android:text="@string/blood_group"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold" />
@@ -179,7 +182,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="26dp"
-                                android:hint="Blood Group">
+                                android:hint="@string/blood_group">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/bloodGroupEt"
@@ -193,7 +196,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="6dp"
-                                android:text="Gender"
+                                android:text="@string/gender"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold" />
@@ -207,21 +210,21 @@
                                     android:id="@+id/maleRB"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Male"
+                                    android:text="@string/male"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:id="@+id/femaleRB"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Female"
+                                    android:text="@string/female"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:id="@+id/nonBinaryRB"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Non Binary"
+                                    android:text="@string/non_binary"
                                     android:textSize="20sp" />
                             </RadioGroup>
                         </LinearLayout>
@@ -247,7 +250,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToNextActivity"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent" />

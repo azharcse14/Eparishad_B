@@ -36,7 +36,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +57,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -75,7 +77,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -94,7 +97,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Date Of Birth"
+                                android:text="@string/date_of_birth"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -104,14 +107,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:weightSum="3">
+                                android:weightSum="3"
+                                android:baselineAligned="false">
 
                                 <com.google.android.material.textfield.TextInputLayout
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Day"
+                                    android:hint="@string/day"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
@@ -119,7 +123,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:inputType="none"
-                                        android:textColor="#000"/>
+                                        android:textColor="#000"
+                                        tools:ignore="LabelFor,TooDeepLayout" />
 
                                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,7 +133,7 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Month"
+                                    android:hint="@string/month"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
@@ -136,7 +141,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:inputType="none"
-                                        android:textColor="#000"/>
+                                        android:textColor="#000"
+                                        tools:ignore="LabelFor" />
 
                                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +151,7 @@
                                     android:layout_weight="1"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
-                                    android:hint="Year"
+                                    android:hint="@string/year"
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
                                     <AutoCompleteTextView
@@ -153,7 +159,8 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:inputType="none"
-                                        android:textColor="#000"/>
+                                        android:textColor="#000"
+                                        tools:ignore="LabelFor" />
 
                                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -164,32 +171,28 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Age"
+                                android:text="@string/age"
                                 android:textColor="@color/black"
-                                android:textSize="26sp"
+                                android:textSize="24sp"
                                 android:textStyle="bold"
                                 android:typeface="normal" />
 
-                            <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            <TextView
+                                android:id="@+id/ageTv"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
-                                android:hint="Members Age">
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/ageEt"
-                                    android:inputType="number"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-
-                            </com.google.android.material.textfield.TextInputLayout>
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/text_view_border"
+                                android:padding="16dp"
+                                android:text="@string/_000"
+                                android:textColor="@color/black"
+                                android:typeface="normal" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Height"
+                                android:text="@string/height"
                                 android:textColor="@color/black"
                                 android:textSize="28sp"
                                 android:textStyle="bold" />
@@ -198,7 +201,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:weightSum="2">
+                                android:weightSum="2"
+                                android:baselineAligned="false">
 
                                 <com.google.android.material.textfield.TextInputLayout
                                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -207,7 +211,7 @@
                                     android:layout_marginEnd="8dp"
                                     android:layout_marginBottom="12dp"
                                     android:layout_weight="1"
-                                    android:hint="Feat">
+                                    android:hint="@string/feat">
 
                                     <com.google.android.material.textfield.TextInputEditText
                                         android:id="@+id/featEt"
@@ -224,7 +228,7 @@
                                     android:layout_marginStart="8dp"
                                     android:layout_marginBottom="12dp"
                                     android:layout_weight="1"
-                                    android:hint="Inch">
+                                    android:hint="@string/inch">
 
                                     <com.google.android.material.textfield.TextInputEditText
                                         android:id="@+id/inchEt"
@@ -241,7 +245,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Weight in KG"
+                                android:text="@string/weight_in_kg"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -252,7 +256,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Weight in KG">
+                                android:hint="@string/weight_in_kg">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/weightEt"
@@ -267,7 +271,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Birth Certification ID"
+                                android:text="@string/birth_certification_id"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -278,12 +282,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Birth Certification ID">
+                                android:hint="@string/birth_certification_id">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/bcEt"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"/>
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -291,7 +296,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Image Of Birth Certificate"
+                                android:text="@string/image_of_birth_certificate"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -309,14 +314,16 @@
                                     android:layout_gravity="center"
                                     android:layout_margin="10dp"
                                     android:onClick="captureImg"
-                                    android:src="@drawable/ic_baseline_camera_white_24" />
+                                    android:src="@drawable/ic_baseline_camera_white_24"
+                                    android:contentDescription="@string/todo" />
 
                                 <ImageView
                                     android:id="@+id/bdCaptureIvId"
                                     android:layout_width="0dp"
                                     android:layout_height="200dp"
                                     android:layout_weight="1"
-                                    android:background="#40DAD5D5" />
+                                    android:background="#40DAD5D5"
+                                    android:contentDescription="@string/todo" />
 
                             </LinearLayout>
 
@@ -325,7 +332,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Birth Place"
+                                android:text="@string/birth_place"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -336,7 +343,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Birth Place">
+                                android:hint="@string/birth_place">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/bpEt"
@@ -350,7 +357,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="BRN Issuing Authority"
+                                android:text="@string/brn_issuing_authority"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -361,7 +368,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="BRN Issuing Authority">
+                                android:hint="@string/brn_issuing_authority">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/brnIAEt"
@@ -383,7 +390,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToPreviousActivity"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
@@ -393,7 +400,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToNextActivity"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent" />

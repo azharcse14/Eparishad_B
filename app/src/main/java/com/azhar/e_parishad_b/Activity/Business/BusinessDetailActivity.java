@@ -112,7 +112,7 @@ public class BusinessDetailActivity extends AppCompatActivity {
             csImagView.setImageBitmap(bitmapSp);
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 

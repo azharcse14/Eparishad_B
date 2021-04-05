@@ -109,7 +109,7 @@ public class HoldingAddActivity extends AppCompatActivity {
             kinNo = "KIN - " + generatedString + " - " + khanaNosp;
             kinNumber.setText(kinNo);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         SharedPreferences spHd = getSharedPreferences("HoldingAdd", Context.MODE_PRIVATE);
@@ -125,7 +125,7 @@ public class HoldingAddActivity extends AppCompatActivity {
 
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
         //========================= RecyclerView =================

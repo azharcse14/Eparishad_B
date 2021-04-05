@@ -28,7 +28,8 @@
                 android:onClick="goToHome"
                 android:src="@drawable/home_icon"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
 
             <ImageView
@@ -36,7 +37,8 @@
                 android:layout_height="60dp"
                 android:src="@drawable/ic_baseline_dehaze_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -62,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Khana Survey"
+                android:text="@string/khana_survey"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -74,38 +76,13 @@
             android:layout_height="2dp"
             android:background="@android:color/darker_gray" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total Count: "
-                android:textColor="#F44336"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/totalCountTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="600dp"
             android:background="@drawable/text_view_border">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -115,7 +92,7 @@
                     android:background="@color/black"
                     android:stretchColumns="1,2,3,4,5,6,7,8,9,10">
 
-                    <TableRow>
+                    <TableRow tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="120dp"
@@ -125,7 +102,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="SN"
+                            android:text="@string/sn"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -138,7 +115,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Creation Date"
+                            android:text="@string/creation_date"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -151,7 +128,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Survey ID"
+                            android:text="@string/survey_id"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -177,7 +154,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Khana Head"
+                            android:text="@string/khana_head"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -190,7 +167,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Holding No"
+                            android:text="@string/holding_no"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -203,7 +180,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Khana No"
+                            android:text="@string/khana_no"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -216,7 +193,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Village"
+                            android:text="@string/village"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -229,7 +206,7 @@
                             android:layout_marginEnd="1dp"
                             android:layout_marginBottom="16dp"
                             android:gravity="center"
-                            android:text="Ward"
+                            android:text="@string/ward"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />

@@ -11,11 +11,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.azhar.e_parishad_b.Activity.HeadActivity;
-import com.azhar.e_parishad_b.Activity.HoldingAddActivity;
 import com.azhar.e_parishad_b.R;
 import com.azhar.e_parishad_b.RecyclerView.SideMenue.MyAdapter;
 
@@ -74,7 +71,7 @@ public class WaterActivity extends AppCompatActivity {
             }
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 

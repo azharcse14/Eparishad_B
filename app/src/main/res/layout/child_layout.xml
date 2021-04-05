@@ -17,7 +17,7 @@
             android:id="@+id/textViewId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Holding No"
+            android:text="@string/holding_no"
             android:textSize="16sp"
             android:gravity="center"
             android:padding="16dp"

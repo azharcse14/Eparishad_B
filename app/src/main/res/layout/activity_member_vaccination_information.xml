@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -76,7 +77,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +89,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Vaccination Information"
+                            android:text="@string/vaccination_information"
                             android:textSize="26sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -97,88 +99,88 @@
                             android:id="@+id/bcgFdCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="BCG, Oral Polio (first dose)"
+                            android:text="@string/bcg_oral_polio_first_dose"
                             android:textSize="20sp"/>
                         <CheckBox
                             android:id="@+id/pentaSdCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Penta, Oral Polio (second dose)"
+                            android:text="@string/penta_oral_polio_second_dose"
                             android:textSize="20sp"/>
                         <CheckBox
                             android:id="@+id/pentaTdCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Penta, Oral Pollo (third dose)"
+                            android:text="@string/penta_oral_polio_third_dose"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/typhoidCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Typhoid"
+                            android:text="@string/typhoid"
                             android:textSize="20sp"/>
                         <CheckBox
                             android:id="@+id/pcvCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="PCV"
+                            android:text="@string/pcv"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/opvCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="OPV(Polio)"
+                            android:text="@string/opv_polio"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/mrCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="MR (Rubella)"
+                            android:text="@string/mr_rubella"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/rotavirusCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Rotavirus"
+                            android:text="@string/rotavirus"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/measlesFdCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Measles, Oral Polio(fifth dose)"
+                            android:text="@string/measles_oral_polio_fifth_dose"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/chickenpoxCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Chickenpox/Varicella"
+                            android:text="@string/chickenpox_varicella"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/hepatitisACB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Hepatitis A"
+                            android:text="@string/hepatitis_a"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/influenzaCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Influenza"
+                            android:text="@string/influenza"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/covidCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="COVID-19"
+                            android:text="@string/covid_19"
                             android:textSize="20sp"/>
                     </LinearLayout>
 
@@ -190,7 +192,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -200,7 +202,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

@@ -36,7 +36,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +57,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -108,14 +111,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Vaccination"
+                                android:text="@string/vaccination"
                                 android:textSize="26sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Nearest Hospital"
+                                android:text="@string/nearest_hospital"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -125,7 +128,7 @@
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="Hospital Name">
+                                android:hint="@string/hospital_name">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/hospitalNameEt"
@@ -138,7 +141,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="42dp"
-                                android:text="Nutrition Consultancy"
+                                android:text="@string/nutrition_consultancy"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -153,14 +156,14 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Yes"
+                                    android:text="@string/yes"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="26dp"
-                                    android:text="No"
+                                    android:text="@string/no"
                                     android:textSize="20sp" />
                             </RadioGroup>
 
@@ -169,7 +172,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="42dp"
                                 android:layout_marginBottom="16dp"
-                                android:text="Mostly Consulting With"
+                                android:text="@string/mostly_consulting_with"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -183,13 +186,13 @@
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Doctor"
+                                    android:text="@string/doctor"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Midwife"
+                                    android:text="@string/midwife"
                                     android:textSize="20sp" />
                             </RadioGroup>
 
@@ -207,7 +210,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToPreviousActivity"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
@@ -217,7 +220,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToNextActivity"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent" />

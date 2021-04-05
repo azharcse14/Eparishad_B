@@ -61,7 +61,7 @@ public class PassportActivity extends AppCompatActivity {
             displayImg = imageDecoder.convert(basestringSp);
             csImagView.setImageBitmap(displayImg);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 

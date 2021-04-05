@@ -11,6 +11,8 @@ import androidx.work.WorkManager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Network;
+import android.net.NetworkRequest;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = findViewById(R.id.syncImgId);
-        totalCountTv = findViewById(R.id.totalCountTv);
+//        totalCountTv = findViewById(R.id.totalCountTv);
         recyclerViewfd = findViewById(R.id.mainRecyclerViewId);
 
 
@@ -62,19 +64,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        totalCountTv.setText(String.valueOf(totalCount));
+//        totalCountTv.setText(String.valueOf(totalCount));
 
         //============================= Fsa Data Loader4=====================================
 
-        try {
-            startService(new Intent(this, Service.class));
-        }catch (Exception e){
 
-        }
+//            startService(new Intent(this, Service.class));
+
+
+
 
 
         //===================== RecyclerView =========================
-
 
         recyclerViewfd.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
@@ -83,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
        LoadDataTask loadDataTask = new LoadDataTask();
        loadDataTask.execute();
+
+       refreshPreiodicWork();
     }
 
 
@@ -132,6 +135,19 @@ public class MainActivity extends AppCompatActivity {
             myTopAdapter = new MyTopAdapter(MainActivity.this, fdEntityArrayList);
             recyclerViewfd.setAdapter(myTopAdapter);
         }
+    }
+
+    public static void refreshPreiodicWork(){
+        Constraints constraints = new Constraints.Builder()
+                .setRequiresDeviceIdle(false)
+                .setRequiresCharging(false)
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .setRequiresBatteryNotLow(true)
+                .setRequiresStorageNotLow(true)
+                .build();
+
+        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES).setConstraints(constraints).build();
+        WorkManager.getInstance().enqueue(periodicWorkRequest);
     }
 
 

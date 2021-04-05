@@ -40,7 +40,7 @@ public class EducationActivity extends AppCompatActivity {
             ((RadioButton) ((RadioGroup)findViewById(R.id.educationRG)).getChildAt(i)).setChecked(true);
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 
@@ -66,7 +66,7 @@ public class EducationActivity extends AppCompatActivity {
             educationRGvalue = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
 

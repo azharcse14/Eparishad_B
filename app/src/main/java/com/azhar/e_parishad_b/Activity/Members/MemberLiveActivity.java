@@ -382,7 +382,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             bitmap = imageDecoder.convert(basestringSp);
             csImagView.setImageBitmap(bitmap);
         } else {
-            Toast.makeText(getApplicationContext(), "Empty", Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "Empty", Toast.LENGTH_LONG).show();
         }
 
 
@@ -408,7 +408,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             dmlopRGvalue = radioButton.getText().toString();
 
         } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), e + "", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e + "", Toast.LENGTH_SHORT).show();
         }
 
         if (livingAddressET.getText().toString().isEmpty()) {

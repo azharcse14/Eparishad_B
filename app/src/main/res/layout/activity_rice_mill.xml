@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -92,7 +95,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rice Mill if any"
+                                android:text="@string/rice_mill_if_any"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -110,7 +113,7 @@
                                 android:id="@+id/ifRiceMillingCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="If Rice Milling"
+                                android:text="@string/if_rice_milling"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="16dp"/>
 
@@ -118,7 +121,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rice Mill Production Capacity (Mon)"
+                                android:text="@string/rice_mill_production_capacity_mon"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -130,7 +133,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Rice Mill Production Capacity">
+                                android:hint="@string/rice_mill_production_capacity">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/rmpcEt"
@@ -143,7 +146,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Type of Rice Milled"
+                                android:text="@string/type_of_rice_milled"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -155,7 +158,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Type of Rice Mill">
+                                android:hint="@string/type_of_rice_mill">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/tOfRmEt"
@@ -167,7 +170,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Owned"
+                                android:text="@string/owned"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -181,21 +184,21 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Yes"
+                                    android:text="@string/yes"
                                     android:textSize="26sp"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
-                                    android:text="No"
+                                    android:text="@string/no"
                                     android:textSize="26sp"/>
                             </RadioGroup>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Are you interested in milling rice at govt fixed rate for a continuous business?"
+                                android:text="@string/are_you_interested_in_milling_rice_at_govt_fixed_rate_for_a_continuous_business"
                                 android:textColor="@color/black"
                                 android:textStyle="bold"
                                 android:textSize="20sp"
@@ -210,13 +213,13 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Yes" />
+                                    android:text="@string/yes" />
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
-                                    android:text="No"/>
+                                    android:text="@string/no"/>
                             </RadioGroup>
 
                         </LinearLayout>
@@ -230,7 +233,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:onClick="goToPreviousActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -240,7 +243,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:onClick="goToNextActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"

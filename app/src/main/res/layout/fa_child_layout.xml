@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -12,7 +13,8 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1,2,3,4,5,6,7,8">
+            android:stretchColumns="1,2,3,4,5,6,7,8"
+            tools:ignore="UselessParent">
 
             <TableRow>
 
@@ -25,7 +27,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="SN"
+                    android:text="@string/sn"
                     android:textColor="@color/black"
                     android:textSize="24sp"/>
 
@@ -38,7 +40,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Creation Date"
+                    android:text="@string/creation_date"
                     android:textColor="@color/black"
                     android:textSize="24sp"/>
 
@@ -52,7 +54,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Survey ID"
+                    android:text="@string/survey_id"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -78,7 +80,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Khana Head"
+                    android:text="@string/khana_head"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -91,7 +93,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Holding No"
+                    android:text="@string/holding_no"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -104,7 +106,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Khana No"
+                    android:text="@string/khana_no"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -117,7 +119,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Village"
+                    android:text="@string/village"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
@@ -130,7 +132,7 @@
                     android:layout_marginEnd="1dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:text="Ward"
+                    android:text="@string/ward"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
             </TableRow>

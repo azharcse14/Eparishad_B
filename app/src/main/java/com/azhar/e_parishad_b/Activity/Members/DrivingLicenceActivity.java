@@ -71,7 +71,7 @@ public class DrivingLicenceActivity extends AppCompatActivity {
             displayImg = imageDecoder.convert(basestringSp);
             csImagView.setImageBitmap(displayImg);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 
@@ -97,7 +97,7 @@ public class DrivingLicenceActivity extends AppCompatActivity {
             tlRGvalue = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
         if (drivingLicenceNumberEt.getText().toString().isEmpty()) {

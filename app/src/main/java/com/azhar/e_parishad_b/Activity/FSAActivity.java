@@ -8,27 +8,16 @@ import androidx.work.Constraints;
 import androidx.work.NetworkType;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.azhar.e_parishad_b.Database.Entity.FDEntity;
 import com.azhar.e_parishad_b.Database.Entity.FaEntity;
 import com.azhar.e_parishad_b.Database.FinalDatabase.Repository;
-import com.azhar.e_parishad_b.Networking.EPNET.Service;
 import com.azhar.e_parishad_b.Networking.FA.MyWorker;
-import com.azhar.e_parishad_b.Networking.FA.SyncFa;
 import com.azhar.e_parishad_b.R;
 import com.azhar.e_parishad_b.RecyclerView.Fa.FaAdapter;
-import com.azhar.e_parishad_b.RecyclerView.Top.MyTopAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -51,7 +40,7 @@ public class FSAActivity extends AppCompatActivity {
         setContentView(R.layout.activity_f_s_a);
 
 
-        totalCountTv = findViewById(R.id.totalCountTv);
+//        totalCountTv = findViewById(R.id.totalCountTv);
         recyclerViewfa = findViewById(R.id.faRecyclerViewId);
 
         //=-===============================================================
@@ -60,7 +49,7 @@ public class FSAActivity extends AppCompatActivity {
 
         totalCount = 0;
 
-        totalCountTv.setText(String.valueOf(totalCount));
+//        totalCountTv.setText(String.valueOf(totalCount));
 
         //===================== RecyclerView =========================
         recyclerViewfa.setHasFixedSize(true);
@@ -110,17 +99,6 @@ public class FSAActivity extends AppCompatActivity {
     }
 
 
-    public static void refreshPreiodicWork(){
-        Constraints constraints = new Constraints.Builder()
-                .setRequiresDeviceIdle(false)
-                .setRequiresCharging(false)
-                .setRequiredNetworkType(NetworkType.CONNECTED)
-                .setRequiresBatteryNotLow(true)
-                .setRequiresStorageNotLow(true)
-                .build();
 
-        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES).setConstraints(constraints).build();
-        WorkManager.getInstance().enqueue(periodicWorkRequest);
-    }
 
 }

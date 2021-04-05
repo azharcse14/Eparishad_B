@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -33,7 +33,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -53,7 +54,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -73,18 +75,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
-                            android:text="Bank Detail"
+                            android:text="@string/bank_detail"
                             android:textColor="@color/black"
                             android:textSize="30sp"
                             android:textStyle="bold" />
@@ -111,9 +115,10 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Account No"
+                                        android:text="@string/account_no"
                                         android:textColor="@color/black"
-                                        android:textSize="28sp" />
+                                        android:textSize="28sp"
+                                        tools:ignore="TooDeepLayout" />
 
                                     <com.google.android.material.textfield.TextInputLayout
                                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -121,7 +126,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="Account No">
+                                        android:hint="@string/account_no">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/accountNoEt"
@@ -142,7 +147,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Mobile No"
+                                        android:text="@string/mobile_no"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -152,7 +157,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="Mobile No">
+                                        android:hint="@string/mobile_no">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                            android:id="@+id/mobailNoEt"
@@ -175,7 +180,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Bank Name"
+                                        android:text="@string/bank_name"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -185,7 +190,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="Bank Name">
+                                        android:hint="@string/bank_name">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/bankNameEt"
@@ -206,7 +211,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="16dp"
                                         android:layout_weight="1"
-                                        android:text="Branch Name"
+                                        android:text="@string/branch_name"
                                         android:textColor="@color/black"
                                         android:textSize="28sp" />
 
@@ -216,7 +221,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:layout_weight="1"
-                                        android:hint="Branch Name">
+                                        android:hint="@string/branch_name">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/branchNameEt"
@@ -235,7 +240,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
-                                        android:text="Previous"
+                                        android:text="@string/previous"
                                         android:onClick="goToPreviousActivity"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -245,7 +250,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="#424141"
-                                        android:text="Next"
+                                        android:text="@string/next"
                                         android:onClick="goToNextActivity"
                                         android:textSize="26sp"
                                         app:layout_constraintBottom_toBottomOf="parent"

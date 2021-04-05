@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -108,7 +111,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Industry Owner"
+                                android:text="@string/industry_owner"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -120,7 +123,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Industry Owner">
+                                android:hint="@string/industry_owner">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/industryOwnerEt"
@@ -132,7 +135,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Type of Industry"
+                                android:text="@string/type_of_industry"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -144,7 +147,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Type of Industry">
+                                android:hint="@string/type_of_industry">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/typeOfIndustryEt"
@@ -156,7 +159,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Source of finance"
+                                android:text="@string/source_of_finance"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -168,7 +171,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Source of finance">
+                                android:hint="@string/source_of_finance">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/sourceOfFinanceEt"
@@ -180,7 +183,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Form of owner ship"
+                                android:text="@string/form_of_owner_ship"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -195,17 +198,17 @@
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Sole"
+                                    android:text="@string/sole"
                                     android:textSize="26sp"/>
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Patnarship"
+                                    android:text="@string/patnarship"
                                     android:textSize="26sp"/>
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Limited"
+                                    android:text="@string/limited"
                                     android:textSize="26sp"/>
 
                             </RadioGroup>
@@ -221,7 +224,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:onClick="goToPreviousActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -231,7 +234,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:onClick="goToNextActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"

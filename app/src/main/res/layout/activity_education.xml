@@ -36,7 +36,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,7 +57,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -76,7 +78,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -94,7 +97,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Heighest Education"
+                                android:text="@string/heighest_education"
                                 android:textColor="@color/black"
                                 android:textSize="36sp"
                                 android:textStyle="bold" />
@@ -108,157 +111,151 @@
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="No Literacy"
+                                    android:text="@string/no_literacy"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="M.phil"
+                                    android:text="@string/m_phil"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="PhD (or equivalent)"
+                                    android:text="@string/phd"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Masters (or equivalent)"
+                                    android:text="@string/masters"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Takmeel (Masters)"
+                                    android:text="@string/takmeel"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Honours (or equivalent)"
+                                    android:text="@string/honours"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Fazila (Honours)"
+                                    android:text="@string/fazil"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Graduation (4 years)"
+                                    android:text="@string/graduation_4_years"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Graduation (3 Years)"
+                                    android:text="@string/graduation_3_years"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Diploma"
+                                    android:text="@string/diploma"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="HSC (or equivalent)"
+                                    android:text="@string/hsc"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Alim"
+                                    android:text="@string/alim"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="SSC (or equivalent)"
+                                    android:text="@string/ssc"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="SSC"
+                                    android:text="@string/dakhil"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Dakhil"
+                                    android:text="@string/jsc"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Junior school certificate (JSC)"
+                                    android:text="@string/jdc"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Junior Dakhil Certificate (JDC)"
+                                    android:text="@string/psc"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Primary School Certificate (PSC)"
+                                    android:text="@string/ebtadayee_madrasah_exam"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Ebtadayee Madrasah exam"
+                                    android:text="@string/sanabia_ulaiya_examination"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Sanabia Ulaiya examination"
+                                    android:text="@string/technical_and_vocational_education"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Technical and Vocational Education"
+                                    android:text="@string/mutawassitah"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Mutawassitah"
+                                    android:text="@string/below_primary"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Below Primary"
+                                    android:text="@string/hafizia"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Hafizia"
+                                    android:text="@string/no_schooling"
                                     android:textSize="20sp" />
 
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="No Schooling"
-                                    android:textSize="20sp" />
-
-                                <RadioButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Can do Sign only"
+                                    android:text="@string/can_do_sign_only"
                                     android:textSize="20sp" />
 
                             </RadioGroup>
@@ -278,7 +275,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToPreviousActivity"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent" />
@@ -288,7 +285,7 @@
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
                                 android:onClick="goToNextActivity"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent" />

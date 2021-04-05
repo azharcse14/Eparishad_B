@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/custom_toast_layout"
     android:orientation="vertical"
-    >
+    tools:ignore="UseCompoundDrawables">
 
     <ImageView
         android:id="@+id/custom_toast_image"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:contentDescription="Hello world"
         android:src="@drawable/error_icon"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/custom_toast_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Sending Error"
+        android:text="@string/sending_error"
         android:textColor="#F44336"
         android:textStyle="bold"
         android:textSize="46sp"

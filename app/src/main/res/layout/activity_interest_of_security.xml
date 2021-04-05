@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -75,7 +77,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -93,7 +96,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Interest of Securities"
+                                android:text="@string/interest_of_securities"
                                 android:textColor="@color/black"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -104,7 +107,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Interest of Securities">
+                                android:hint="@string/interest_of_securities">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/interestOfSecuritiesEt"
@@ -117,7 +120,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Income from house property"
+                                android:text="@string/income_from_house_property"
                                 android:textColor="@color/black"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -128,7 +131,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Income from house property (in BDT)">
+                                android:hint="@string/income_from_house_property_in_bdt">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/ifhpEt"
@@ -142,7 +145,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Income from agricultural"
+                                android:text="@string/income_from_agricultural"
                                 android:textColor="@color/black"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -153,7 +156,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Income from agricultural">
+                                android:hint="@string/income_from_agricultural">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/ifaEt"
@@ -167,7 +170,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Capital Gain"
+                                android:text="@string/capital_gain"
                                 android:textColor="@color/black"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -178,7 +181,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Capital Gain">
+                                android:hint="@string/capital_gain">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/capitalGainEt"
@@ -191,7 +194,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="16dp"
-                                android:text="Income from other source"
+                                android:text="@string/income_from_other_source"
                                 android:textColor="@color/black"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
@@ -202,7 +205,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Income from other source (in BDT)">
+                                android:hint="@string/income_from_other_source_in_bdt">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/ifosEt"
@@ -223,7 +226,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:onClick="goToPreviousActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -233,7 +236,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:onClick="goToNextActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"

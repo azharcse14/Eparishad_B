@@ -53,7 +53,7 @@ public class ElectricityActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(getApplicationContext(),"Please complete the survey", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(),"Please complete the survey", Toast.LENGTH_LONG).show();
     }
 
     public void goToNextActivity(View view) {
@@ -64,15 +64,16 @@ public class ElectricityActivity extends AppCompatActivity {
             isThereElectricityRGvalue = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
+
         try {
             int selectedId = typeOfElectricityRG.getCheckedRadioButtonId();
             radioButton = findViewById(selectedId);
             typeOfElectricityRGvalue = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
         //================== Shared Preferences ====================

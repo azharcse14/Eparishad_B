@@ -49,7 +49,7 @@ public class ReligionActivity extends AppCompatActivity {
             ethnicitySp = sp.getString("ethnicity", "Data Not Found");
             ethnicityEt.setText(ethnicitySp);
         }else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 
@@ -80,7 +80,7 @@ public class ReligionActivity extends AppCompatActivity {
             value = radioButton.getText().toString();
 
         }catch (Exception e){
-            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
 

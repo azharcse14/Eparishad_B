@@ -33,7 +33,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -53,7 +54,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -74,7 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -85,7 +88,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Dose this member live in other place?"
+                            android:text="@string/dose_this_member_live_in_other_place"
                             android:textSize="26sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -100,12 +103,12 @@
                             <RadioButton
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes"
+                                android:text="@string/yes"
                                 android:textSize="20sp"/>
                             <RadioButton
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="No"
+                                android:text="@string/no"
                                 android:textSize="20sp"/>
 
                         </RadioGroup>
@@ -113,7 +116,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Living Address"
+                            android:text="@string/living_address"
                             android:textSize="26sp"
                             android:layout_marginTop="16dp"
                             android:textColor="@color/black"
@@ -124,7 +127,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
-                            android:hint="Living Address">
+                            android:hint="@string/living_address">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/livingAddressET"
@@ -138,7 +141,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="16dp"
-                            android:text="Photo of the Member"
+                            android:text="@string/photo_of_the_member"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold"
@@ -156,14 +159,16 @@
                                 android:layout_gravity="center"
                                 android:layout_margin="10dp"
                                 android:onClick="captureImg"
-                                android:src="@drawable/ic_baseline_camera_white_24" />
+                                android:src="@drawable/ic_baseline_camera_white_24"
+                                android:contentDescription="@string/todo" />
 
                             <ImageView
                                 android:id="@+id/bdCaptureIvId"
                                 android:layout_width="0dp"
                                 android:layout_height="200dp"
                                 android:layout_weight="1"
-                                android:background="#40DAD5D5" />
+                                android:background="#40DAD5D5"
+                                android:contentDescription="@string/todo" />
 
                         </LinearLayout>
 
@@ -179,7 +184,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -189,7 +194,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Done"
+                            android:text="@string/done"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

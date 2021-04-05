@@ -81,7 +81,7 @@ public class HoldingNoActivity extends AppCompatActivity {
             longitudeTv.setText(longi);
         }
         else {
-            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
         }
 
 

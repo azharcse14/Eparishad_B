@@ -55,7 +55,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -75,7 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_margin="16dp">
+                    android:layout_margin="16dp"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -86,7 +88,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Water Supply"
+                            android:text="@string/water_supply"
                             android:textSize="36sp"
                             android:layout_marginBottom="16dp"
                             android:textColor="@color/black"
@@ -96,42 +98,42 @@
                             android:id="@+id/tubewellIHCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tubewell (Inside House)"
+                            android:text="@string/tubewell_inside_house"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/tubewellUHCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tubewell (Outside House)"
+                            android:text="@string/tubewell_outside_house"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/supplyLineCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Supply Line"
+                            android:text="@string/supply_line"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/poundCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Pond"
+                            android:text="@string/pond"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/riverCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="River"
+                            android:text="@string/river"
                             android:textSize="20sp"/>
 
                         <CheckBox
                             android:id="@+id/otherCB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Other"
+                            android:text="@string/other"
                             android:textSize="20sp"/>
                     </LinearLayout>
 
@@ -145,7 +147,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Previous"
+                            android:text="@string/previous"
                             android:onClick="goToPreviousActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -155,7 +157,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:backgroundTint="#424141"
-                            android:text="Next"
+                            android:text="@string/next"
                             android:onClick="goToNextActivity"
                             android:textSize="26sp"
                             app:layout_constraintBottom_toBottomOf="parent"

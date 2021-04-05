@@ -35,7 +35,8 @@
                     android:layout_height="60dp"
                     android:src="@drawable/ic_baseline_dehaze_24"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/todo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewId"
@@ -73,7 +75,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -91,7 +94,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Vehicle Business (if any)"
+                                android:text="@string/vehicle_business_if_any"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -109,14 +112,14 @@
                                 android:id="@+id/ifBusinessCB"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="If Business"
+                                android:text="@string/if_business"
                                 android:textSize="26sp"
                                 android:layout_marginBottom="16dp"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Type of Vehicle"
+                                android:text="@string/type_of_vehicle"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -130,12 +133,12 @@
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Truck"
+                                    android:text="@string/truck"
                                     android:textSize="26sp"/>
                                 <RadioButton
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Mini Truck"
+                                    android:text="@string/mini_truck"
                                     android:textSize="26sp"/>
                             </RadioGroup>
 
@@ -143,7 +146,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Number of Vehicle"
+                                android:text="@string/number_of_vehicle"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -156,7 +159,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="0">
+                                android:hint="@string/zero">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/numberOfVehicleEt"
@@ -170,7 +173,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Total Capacity"
+                                android:text="@string/total_capacity"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -182,7 +185,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="0">
+                                android:hint="@string/zero">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/totalCapacityEt"
@@ -195,7 +198,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Source of finance"
+                                android:text="@string/source_of_finance"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -207,7 +210,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
-                                android:hint="Source of finance">
+                                android:hint="@string/source_of_finance">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/sourceOfFinanceVbEt"
@@ -219,7 +222,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Owned"
+                                android:text="@string/owned"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -234,21 +237,21 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Yes"
+                                    android:text="@string/yes"
                                     android:textSize="26sp"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
-                                    android:text="No"
+                                    android:text="@string/no"
                                     android:textSize="26sp"/>
                             </RadioGroup>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Are you interested in driving vehicle for govt"
+                                android:text="@string/are_you_interested_in_driving_vehicle_for_govt"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
@@ -263,14 +266,14 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Yes"
+                                    android:text="@string/yes"
                                     android:textSize="26sp"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
-                                    android:text="No"
+                                    android:text="@string/no"
                                     android:textSize="26sp"/>
                             </RadioGroup>
 
@@ -286,7 +289,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Previous"
+                                android:text="@string/previous"
                                 android:onClick="goToPreviousActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -296,7 +299,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="#424141"
-                                android:text="Next"
+                                android:text="@string/next"
                                 android:onClick="goToNextActivity"
                                 android:textSize="26sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
