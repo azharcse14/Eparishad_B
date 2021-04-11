@@ -323,7 +323,7 @@
                                     android:layout_height="200dp"
                                     android:layout_weight="1"
                                     android:background="#40DAD5D5"
-                                    android:contentDescription="@string/todo" />
+                                    android:contentDescription="@string/todo"/>
 
                             </LinearLayout>
 

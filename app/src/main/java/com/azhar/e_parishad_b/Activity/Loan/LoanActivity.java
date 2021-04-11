@@ -247,7 +247,7 @@ public class LoanActivity extends AppCompatActivity {
             tradelicensemumber = Business.getString("tradeLicenceNumber", "Data Not Found");
         }
         if (Business.contains("basestring")) {
-            tradelicensemumberimage = Business.getString("basestring", "Data Not Found");
+            tradelicensemumberimage = "data:image/jpeg;base64,"+Business.getString("basestring", "Data Not Found");
         }
         if (Business.contains("businessAddress")) {
             businessAddress = Business.getString("businessAddress", "Data Not Found");

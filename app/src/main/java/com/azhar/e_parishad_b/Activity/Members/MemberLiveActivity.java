@@ -126,7 +126,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             birthcertificateno = MDONE.getString("bcId", "Data Not Found");
         }
         if (MDONE.contains("basestring")){
-            birthcertificateimage = MDONE.getString("basestring", "Data Not Found");
+            birthcertificateimage =  "data:image/jpeg;base64,"+MDONE.getString("basestring", "Data Not Found");
         }
 
         //===================================================================================
@@ -139,7 +139,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             nid = Nationality.getString("nationalId", "Data Not Found");
         }
         if (Nationality.contains("basestring")){
-            nidimage = Nationality.getString("basestring", "Data Not Found");
+            nidimage =  "data:image/jpeg;base64,"+Nationality.getString("basestring", "Data Not Found");
         }
 
         //===================================================================================
@@ -193,7 +193,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             socialsafetynetcardinfo = SocialSaftyNet.getString("ssnci", "Data Not Found");
         }
         if (SocialSaftyNet.contains("basestring")){
-            socialsafetynetcardphoto = SocialSaftyNet.getString("basestring", "Data Not Found");
+            socialsafetynetcardphoto =  "data:image/jpeg;base64,"+SocialSaftyNet.getString("basestring", "Data Not Found");
         }
 
         //===================================================================================
@@ -206,7 +206,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             tinNumber = TinInformation.getString("tinNumber", "Data Not Found");
         }
         if (TinInformation.contains("basestring")){
-            tinimage = TinInformation.getString("basestring", "Data Not Found");
+            tinimage =  "data:image/jpeg;base64,"+TinInformation.getString("basestring", "Data Not Found");
         }
 
         //===================================================================================
@@ -216,7 +216,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             passportno = Passport.getString("passportNo", "Data Not Found");
         }
         if (Passport.contains("basestring")){
-            passportimage = Passport.getString("basestring", "Data Not Found");
+            passportimage =  "data:image/jpeg;base64,"+Passport.getString("basestring", "Data Not Found");
         }
 
         //===================================================================================
@@ -229,7 +229,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             drivingLicenceNumber = DrivingLicence.getString("drivingLicenceNumber", "Data Not Found");
         }
         if (DrivingLicence.contains("basestring")){
-            dirivinglicenseimage = DrivingLicence.getString("basestring", "Data Not Found");
+            dirivinglicenseimage =  "data:image/jpeg;base64,"+DrivingLicence.getString("basestring", "Data Not Found");
         }
 
         //===================================================================================
@@ -350,7 +350,7 @@ public class MemberLiveActivity extends AppCompatActivity {
         //===================================================================================
         ismemberlivehere = dmlopRGvalue;
         mlivingAddress = livingAddress;
-        memberimage = basestring;
+        memberimage =  "data:image/jpeg;base64,"+basestring;
 
         //===================================================================================
 
@@ -589,7 +589,7 @@ public class MemberLiveActivity extends AppCompatActivity {
 
             imageEncoder = new ImageEncoder();
 
-            basestring = "data:image/jpeg;base64,"+imageEncoder.convert(reduceBitmap);
+            basestring = imageEncoder.convert(reduceBitmap);
 //            testTv.setText(basestring);
 
         }

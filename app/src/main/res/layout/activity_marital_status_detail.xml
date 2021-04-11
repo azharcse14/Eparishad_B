@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:onClick="hideKeyboard"
     tools:context=".Activity.Members.MaritalStatusDetailActivity">
 
@@ -127,6 +129,34 @@
                                 android:textSize="20sp"/>
 
                         </RadioGroup>
+
+
+                        <TextView
+                            android:id="@+id/spouseNameId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/spouse_name"
+                            android:textColor="@color/black"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="36dp"
+                            android:hint="@string/spouse_name">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/spouseNameEtId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
 
                     </LinearLayout>
 

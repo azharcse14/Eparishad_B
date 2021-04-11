@@ -10,8 +10,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.azhar.e_parishad_b.R;
@@ -25,12 +27,19 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
     RadioButton radioButton;
     String marriedRGvalue;
 
+    TextView spouseNameTv;
+    EditText spouseNameEt;
+
+    String spouseName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marital_status_detail);
 
         marriedRG = findViewById(R.id.marriedRG);
+        spouseNameTv = findViewById(R.id.spouseNameId);
+        spouseNameEt = findViewById(R.id.spouseNameEtId);
 
         //================= Shared Preferences value retrive =========================
 
@@ -42,9 +51,33 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
             ((RadioButton) ((RadioGroup)findViewById(R.id.marriedRG)).getChildAt(i)).setChecked(true);
         }
 
-        else {
-//            Toast.makeText(getApplicationContext(),"Empty",Toast.LENGTH_LONG).show();
+        if (sp.contains("spouseName")) {
+            spouseName = sp.getString("spouseName", "Data Not Found");
+            spouseNameEt.setText(spouseName);
         }
+
+        spouseNameTv.setVisibility(View.GONE);
+        spouseNameEt.setVisibility(View.GONE);
+
+        marriedRG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                radioButton = (RadioButton) findViewById(checkedId);
+
+                if (checkedId == 1){
+                    spouseNameTv.setVisibility(View.VISIBLE);
+                    spouseNameEt.setVisibility(View.VISIBLE);
+
+
+//                    Toast.makeText(getBaseContext(), radioButton.getText(), Toast.LENGTH_SHORT).show();
+
+                }else {
+                    spouseNameTv.setVisibility(View.GONE);
+                    spouseNameEt.setVisibility(View.GONE);
+                }
+            }
+        });
 
         //================= RecyclerView =====================
 
@@ -71,6 +104,11 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
 //            Toast.makeText(getApplicationContext(), e+"", Toast.LENGTH_SHORT).show();
         }
 
+        if (spouseNameEt.getText().toString().isEmpty()) {
+            spouseName = "N/A";
+        } else {
+            spouseName = spouseNameEt.getText().toString().trim();
+        }
 
 
         //================== Shared Preferences ====================
@@ -78,6 +116,7 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("maritalStatus", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putString("marriedRGvalue", marriedRGvalue);
+        editor.putString("spouseName", spouseName);
 
         editor.putInt("my_choice_key", marriedRG.indexOfChild(findViewById(marriedRG.getCheckedRadioButtonId())));
         editor.apply();

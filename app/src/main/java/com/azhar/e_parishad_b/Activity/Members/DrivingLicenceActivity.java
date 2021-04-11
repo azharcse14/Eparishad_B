@@ -149,7 +149,7 @@ public class DrivingLicenceActivity extends AppCompatActivity {
 
             imageEncoder = new ImageEncoder();
 
-            basestring = "data:image/jpeg;base64,"+imageEncoder.convert(reduceBitmap);
+            basestring = imageEncoder.convert(reduceBitmap);
 //            testTv.setText(basestring);
 
         }
