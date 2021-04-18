@@ -72,7 +72,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
             isTinAvaiable, tinNumber, tinimage, passportno, passportimage, isDrivingLicenceAvailable, drivingLicenceNumber,
             dirivinglicenseimage, higheshtEducation, doyoustudynow, whichLevel, educationinstitution, educationFinishingWant,
             training, primaryprofession, secondaryprofession, ifunemployednow, rickformofownership, ricksourcesoffinance,
-            ricknooftransport, maritialstatus, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
+            ricknooftransport, maritialstatus, spousename, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
             incomefromMainOccuption, incomefromSecondOccuption, additionalincome, mobaileNumber, email,
             accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage;
 
@@ -256,8 +256,6 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
 
                     SQLiteHelper sqLiteHelper = new SQLiteHelper(context);
                     SQLiteDatabase sqLiteDatabase = sqLiteHelper.getReadableDatabase();
-                    System.out.println(kinnumber);
-
 
                     Cursor cursor = sqLiteHelper.displayAllData(kinnumber);
 
@@ -320,22 +318,23 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                             ricksourcesoffinance = cursor.getString(47);
                             ricknooftransport = cursor.getString(48);
                             maritialstatus = cursor.getString(49);
-                            marriageRegNo = cursor.getString(50);
-                            marriageRegDate = cursor.getString(51);
-                            divorceRegNo = cursor.getString(52);
-                            divorceRegDate = cursor.getString(53);
-                            incomefromMainOccuption = cursor.getString(54);
-                            incomefromSecondOccuption = cursor.getString(55);
-                            additionalincome = cursor.getString(56);
-                            mobaileNumber = cursor.getString(57);
-                            email = cursor.getString(58);
-                            accountNo = cursor.getString(59);
-                            mobaileNo = cursor.getString(60);
-                            bankName = cursor.getString(61);
-                            branchName = cursor.getString(62);
-                            ismemberlivehere = cursor.getString(63);
-                            mlivingAddress = cursor.getString(64);
-                            memberimage = cursor.getString(65);
+                            spousename = cursor.getString(50);
+                            marriageRegNo = cursor.getString(51);
+                            marriageRegDate = cursor.getString(52);
+                            divorceRegNo = cursor.getString(53);
+                            divorceRegDate = cursor.getString(54);
+                            incomefromMainOccuption = cursor.getString(55);
+                            incomefromSecondOccuption = cursor.getString(56);
+                            additionalincome = cursor.getString(57);
+                            mobaileNumber = cursor.getString(58);
+                            email = cursor.getString(59);
+                            accountNo = cursor.getString(60);
+                            mobaileNo = cursor.getString(61);
+                            bankName = cursor.getString(62);
+                            branchName = cursor.getString(63);
+                            ismemberlivehere = cursor.getString(64);
+                            mlivingAddress = cursor.getString(65);
+                            memberimage = cursor.getString(66);
 
                             memberObject = new MemberObject(membername, member_id, bloodgroup, fathername, mothername, gender, isHead, relationship, bdaydate,
                                     bdaymonth, bdayyear, age, birthcertificateno, birthcertificateimage, nationality, nid,
@@ -344,7 +343,7 @@ public class MyTopAdapter extends RecyclerView.Adapter<MyTopViewHolder> {
                                     isTinAvaiable, tinNumber, tinimage, passportno, passportimage, isDrivingLicenceAvailable, drivingLicenceNumber,
                                     dirivinglicenseimage, higheshtEducation, doyoustudynow, whichLevel, educationinstitution, educationFinishingWant,
                                     arrOfTraining, primaryprofession, secondaryprofession, ifunemployednow, rickformofownership, ricksourcesoffinance,
-                                    ricknooftransport, maritialstatus, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
+                                    ricknooftransport, maritialstatus, spousename, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
                                     incomefromMainOccuption, incomefromSecondOccuption, additionalincome, mobaileNumber, email,
                                     accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage);
 

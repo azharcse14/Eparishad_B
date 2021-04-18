@@ -5,12 +5,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
+import java.util.ArrayList;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "final.db";
     public static final int VERSION_NUMBER = 1;
+    public static final String TABLE_NAME = "MNEntity";
+
 
     Context context;
     public SQLiteHelper(Context context) {
@@ -49,5 +51,40 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     }
 
 
+    public ArrayList<String> memberName(String kinnumber){
+        System.out.println(kinnumber);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        String[] scripts = new String [] {kinnumber};
+        ArrayList<String> name = new ArrayList<String>();
+
+        try {
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM MNEntity a where a.kinnumber = ?",scripts,null);
+//            System.out.println("Cursor: "+cursor);
+//            System.out.println("Count: "+cursor.getCount());
+
+
+            if (cursor.getCount()>0){
+                Cursor cursorone = sqLiteDatabase.rawQuery("SELECT * FROM MNEntity a where a.kinnumber = ?",scripts,null);
+                while(cursorone.moveToNext()){
+                    String newname = cursorone.getString(1);
+                    name.add(newname);
+                    System.out.println("cursorone:  "+cursorone.getString(1));
+                }
+            }
+
+            System.out.println("ArrayList: "+name);
+            return name;
+
+        }catch (Exception e){
+            System.out.println("e"+e);
+        }
+
+
+//        Cursor cursor = sqLiteDatabase.rawQuery("SELECT *" +
+//                " FROM MNEntity where kinnumber = kinnumber",scripts,null);
+//        return cursor;
+
+        return name;
+    }
 
 }

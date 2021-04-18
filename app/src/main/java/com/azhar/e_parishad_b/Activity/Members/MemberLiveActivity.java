@@ -50,7 +50,7 @@ public class MemberLiveActivity extends AppCompatActivity {
             isTinAvaiable, tinNumber, tinimage, passportno, passportimage, isDrivingLicenceAvailable, drivingLicenceNumber,
             dirivinglicenseimage, higheshtEducation,   doyoustudynow, whichLevel, educationinstitution, educationFinishingWant,
             training, primaryprofession,  secondaryprofession, ifunemployednow, rickformofownership, ricksourcesoffinance,
-            ricknooftransport,  maritialstatus, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
+            ricknooftransport,  maritialstatus, spousename, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
             incomefromMainOccuption, incomefromSecondOccuption, additionalincome, mobaileNumber, email,
             accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage, kinnumber;
 
@@ -292,6 +292,8 @@ public class MemberLiveActivity extends AppCompatActivity {
         maritalStatus = getSharedPreferences("maritalStatus", Context.MODE_PRIVATE);
         if (maritalStatus.contains("marriedRGvalue")){
             maritialstatus = maritalStatus.getString("marriedRGvalue", "Data Not Found");
+        } if (maritalStatus.contains("spouseName")){
+            spousename = maritalStatus.getString("spouseName", "Data Not Found");
         }
 
         //===================================================================================
@@ -446,7 +448,7 @@ public class MemberLiveActivity extends AppCompatActivity {
                 isTinAvaiable, tinNumber, tinimage, passportno, passportimage, isDrivingLicenceAvailable, drivingLicenceNumber,
                 dirivinglicenseimage, higheshtEducation,   doyoustudynow, whichLevel, educationinstitution, educationFinishingWant,
                 training, primaryprofession,  secondaryprofession, ifunemployednow, rickformofownership, ricksourcesoffinance,
-                ricknooftransport,  maritialstatus, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
+                ricknooftransport,  maritialstatus, spousename, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
                 incomefromMainOccuption, incomefromSecondOccuption, additionalincome, mobaileNumber, email,
                 accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage, kinnumber);
         repository.InsertTaskMNEntity(mnEntity);
@@ -458,7 +460,7 @@ public class MemberLiveActivity extends AppCompatActivity {
                 isTinAvaiable, tinNumber, tinimage, passportno, passportimage, isDrivingLicenceAvailable, drivingLicenceNumber,
                 dirivinglicenseimage, higheshtEducation,   doyoustudynow, whichLevel, educationinstitution, educationFinishingWant,
                 training, primaryprofession,  secondaryprofession, ifunemployednow, rickformofownership, ricksourcesoffinance,
-                ricknooftransport,  maritialstatus, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
+                ricknooftransport,  maritialstatus, spousename, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
                 incomefromMainOccuption, incomefromSecondOccuption, additionalincome, mobaileNumber, email,
                 accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage, kinnumber);
         repository.InsertTaskMemberTemp(memberTempEntity);

@@ -94,28 +94,19 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="6dp"
                                 android:text="@string/member_name"
                                 android:textColor="@color/black"
                                 android:textSize="26sp"
-                                android:textStyle="bold"
-                                android:typeface="normal"
-                                android:layout_marginBottom="16dp"/>
+                                android:textStyle="bold" />
 
-                            <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            <AutoCompleteTextView
+                                android:id="@+id/memberNameAcTvId"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
-                                android:hint="@string/member_name">
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/memberNameEt"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content" />
-
-                            </com.google.android.material.textfield.TextInputLayout>
-
-
+                                android:hint="@string/member_name"
+                                android:padding="16dp"
+                                android:background="@android:drawable/editbox_background"/>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -126,21 +117,13 @@
                                 android:textSize="26sp"
                                 android:textStyle="bold" />
 
-                            <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            <AutoCompleteTextView
+                                android:id="@+id/fatherNameAcTvId"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="36dp"
-                                android:hint="@string/father_s_name">
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/fatherNameEtId"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="text" />
-
-                            </com.google.android.material.textfield.TextInputLayout>
-
+                                android:hint="@string/father_s_name"
+                                android:padding="16dp"
+                                android:background="@android:drawable/editbox_background"/>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -151,22 +134,13 @@
                                 android:textSize="26sp"
                                 android:textStyle="bold" />
 
-                            <com.google.android.material.textfield.TextInputLayout
-                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            <AutoCompleteTextView
+                                android:id="@+id/motherNameAcTvId"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="36dp"
-                                android:hint="@string/mother_s_name">
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/motherNameEtId"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="text" />
-
-                            </com.google.android.material.textfield.TextInputLayout>
-
-
+                                android:hint="@string/mother_s_name"
+                                android:padding="16dp"
+                                android:background="@android:drawable/editbox_background"/>
 
                             <TextView
                                 android:layout_width="match_parent"

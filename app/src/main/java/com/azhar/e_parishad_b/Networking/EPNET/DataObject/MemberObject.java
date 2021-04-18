@@ -17,12 +17,12 @@ public class MemberObject {
             dirivinglicenseimage, higheshtEducation, doyoustudynow, whichLevel, educationinstitution, educationFinishingWant;
     String[] training;
     String primaryprofession, secondaryprofession, ifunemployednow, rickformofownership, ricksourcesoffinance,
-            ricknooftransport, maritialstatus, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
+            ricknooftransport, maritialstatus, spousename, marriageRegNo, marriageRegDate, divorceRegNo, divorceRegDate,
             incomefromMainOccuption, incomefromSecondOccuption, additionalincome, mobaileNumber, email,
             accountNo, mobaileNo, bankName, branchName, ismemberlivehere, mlivingAddress, memberimage;
 
 
-    public MemberObject(String membername, String member_id, String bloodgroup, String fathername, String mothername, String gender, String isHead, String relationship, String bdaydate, String bdaymonth, String bdayyear, String age, String birthcertificateno, String birthcertificateimage, String nationality, String nid, String nidimage, String[] membervaccine, String[] disability, String ismothervaccination, String nearesthospital, String maternitynutritionconsultancy, String consultingwith, String iseligiblecouple, String anyfamilyplaning, String[] socialsafetynet, String socialsafetynetcardinfo, String socialsafetynetcardphoto, String isTinAvaiable, String tinNumber, String tinimage, String passportno, String passportimage, String isDrivingLicenceAvailable, String drivingLicenceNumber, String dirivinglicenseimage, String higheshtEducation, String doyoustudynow, String whichLevel, String educationinstitution, String educationFinishingWant, String[] training, String primaryprofession, String secondaryprofession, String ifunemployednow, String rickformofownership, String ricksourcesoffinance, String ricknooftransport, String maritialstatus, String marriageRegNo, String marriageRegDate, String divorceRegNo, String divorceRegDate, String incomefromMainOccuption, String incomefromSecondOccuption, String additionalincome, String mobaileNumber, String email, String accountNo, String mobaileNo, String bankName, String branchName, String ismemberlivehere, String mlivingAddress, String memberimage) {
+    public MemberObject(String membername, String member_id, String bloodgroup, String fathername, String mothername, String gender, String isHead, String relationship, String bdaydate, String bdaymonth, String bdayyear, String age, String birthcertificateno, String birthcertificateimage, String nationality, String nid, String nidimage, String[] membervaccine, String[] disability, String ismothervaccination, String nearesthospital, String maternitynutritionconsultancy, String consultingwith, String iseligiblecouple, String anyfamilyplaning, String[] socialsafetynet, String socialsafetynetcardinfo, String socialsafetynetcardphoto, String isTinAvaiable, String tinNumber, String tinimage, String passportno, String passportimage, String isDrivingLicenceAvailable, String drivingLicenceNumber, String dirivinglicenseimage, String higheshtEducation, String doyoustudynow, String whichLevel, String educationinstitution, String educationFinishingWant, String[] training, String primaryprofession, String secondaryprofession, String ifunemployednow, String rickformofownership, String ricksourcesoffinance, String ricknooftransport, String maritialstatus, String spousename, String marriageRegNo, String marriageRegDate, String divorceRegNo, String divorceRegDate, String incomefromMainOccuption, String incomefromSecondOccuption, String additionalincome, String mobaileNumber, String email, String accountNo, String mobaileNo, String bankName, String branchName, String ismemberlivehere, String mlivingAddress, String memberimage) {
         this.membername = membername;
         this.member_id = member_id;
         this.bloodgroup = bloodgroup;
@@ -72,6 +72,7 @@ public class MemberObject {
         this.ricksourcesoffinance = ricksourcesoffinance;
         this.ricknooftransport = ricknooftransport;
         this.maritialstatus = maritialstatus;
+        this.spousename = spousename;
         this.marriageRegNo = marriageRegNo;
         this.marriageRegDate = marriageRegDate;
         this.divorceRegNo = divorceRegNo;
@@ -138,16 +139,16 @@ public class MemberObject {
         this.gender = gender;
     }
 
-    public String getRelationship() {
-        return relationship;
-    }
-
     public String getIsHead() {
         return isHead;
     }
 
     public void setIsHead(String isHead) {
         this.isHead = isHead;
+    }
+
+    public String getRelationship() {
+        return relationship;
     }
 
     public void setRelationship(String relationship) {
@@ -480,6 +481,14 @@ public class MemberObject {
 
     public void setMaritialstatus(String maritialstatus) {
         this.maritialstatus = maritialstatus;
+    }
+
+    public String getSpousename() {
+        return spousename;
+    }
+
+    public void setSpousename(String spousename) {
+        this.spousename = spousename;
     }
 
     public String getMarriageRegNo() {

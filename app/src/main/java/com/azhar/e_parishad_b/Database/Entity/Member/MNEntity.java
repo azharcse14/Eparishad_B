@@ -156,6 +156,9 @@ public class MNEntity {
     @ColumnInfo(name = "maritialstatus")
     public String maritialstatus;
 
+ @ColumnInfo(name = "spousename")
+    public String spousename;
+
     @ColumnInfo(name = "marriageRegNo")
     public String marriageRegNo;
 
@@ -207,7 +210,7 @@ public class MNEntity {
     @ColumnInfo(name = "kinnumber")
     public String kinnumber;
 
-    public MNEntity(String namei, String member_idi, String bloodgroupi, String fathernamei, String mothernamei, String genderi, String isHeadi, String relationshipi, String bdaydatei, String bdaymonthi, String bdayyeari, String agei, String birthcertificatenoi, String birthcertificateimagei, String nationalityi, String nidi, String nidimagei, String membervaccinei, String disabilityi, String ismothervaccinationi, String nearesthospitali, String maternitynutritionconsultancyi, String consultingwithi, String iseligiblecouplei, String anyfamilyplaningi, String socialsafetyneti, String socialsafetynetcardinfoi, String socialsafetynetcardphotoi, String isTinAvaiablei, String tinNumberi, String tinimagei, String passportnoi, String passportimagei, String isDrivingLicenceAvailablei, String drivingLicenceNumberi, String dirivinglicenseimagei, String higheshtEducationi, String doyoustudynowi, String whichLeveli, String educationinstitutioni, String educationFinishingWanti, String trainingi, String primaryprofessioni, String secondaryprofessioni, String ifunemployednowi, String rickformofownershipi, String ricksourcesoffinancei, String ricknooftransporti, String maritialstatusi, String marriageRegNoi, String marriageRegDatei, String divorceRegNoi, String divorceRegDatei, String incomefromMainOccuptioni, String incomefromSecondOccuptioni, String additionalincomei, String mobaileNumberi, String emaili, String accountNoi, String mobaileNoi, String bankNamei, String branchNamei, String ismemberliveherei, String mlivingAddressi, String memberimagei, String kinnumberi) {
+    public MNEntity(String namei, String member_idi, String bloodgroupi, String fathernamei, String mothernamei, String genderi, String isHeadi, String relationshipi, String bdaydatei, String bdaymonthi, String bdayyeari, String agei, String birthcertificatenoi, String birthcertificateimagei, String nationalityi, String nidi, String nidimagei, String membervaccinei, String disabilityi, String ismothervaccinationi, String nearesthospitali, String maternitynutritionconsultancyi, String consultingwithi, String iseligiblecouplei, String anyfamilyplaningi, String socialsafetyneti, String socialsafetynetcardinfoi, String socialsafetynetcardphotoi, String isTinAvaiablei, String tinNumberi, String tinimagei, String passportnoi, String passportimagei, String isDrivingLicenceAvailablei, String drivingLicenceNumberi, String dirivinglicenseimagei, String higheshtEducationi, String doyoustudynowi, String whichLeveli, String educationinstitutioni, String educationFinishingWanti, String trainingi, String primaryprofessioni, String secondaryprofessioni, String ifunemployednowi, String rickformofownershipi, String ricksourcesoffinancei, String ricknooftransporti, String maritialstatusi, String spousenamei, String marriageRegNoi, String marriageRegDatei, String divorceRegNoi, String divorceRegDatei, String incomefromMainOccuptioni, String incomefromSecondOccuptioni, String additionalincomei, String mobaileNumberi, String emaili, String accountNoi, String mobaileNoi, String bankNamei, String branchNamei, String ismemberliveherei, String mlivingAddressi, String memberimagei, String kinnumberi) {
         this.name = namei;
         this.member_id = member_idi;
         this.bloodgroup = bloodgroupi;
@@ -257,6 +260,7 @@ public class MNEntity {
         this.ricksourcesoffinance = ricksourcesoffinancei;
         this.ricknooftransport = ricknooftransporti;
         this.maritialstatus = maritialstatusi;
+        this.spousename = spousenamei;
         this.marriageRegNo = marriageRegNoi;
         this.marriageRegDate = marriageRegDatei;
         this.divorceRegNo = divorceRegNoi;
@@ -277,7 +281,7 @@ public class MNEntity {
     }
 
 
-    public MNEntity(int id, String name, String member_id, String bloodgroup, String fathername, String mothername, String gender, String isHead, String relationship, String bdaydate, String bdaymonth, String bdayyear, String age, String birthcertificateno, String birthcertificateimage, String nationality, String nid, String nidimage, String membervaccine, String disability, String ismothervaccination, String nearesthospital, String maternitynutritionconsultancy, String consultingwith, String iseligiblecouple, String anyfamilyplaning, String socialsafetynet, String socialsafetynetcardinfo, String socialsafetynetcardphoto, String isTinAvaiable, String tinNumber, String tinimage, String passportno, String passportimage, String isDrivingLicenceAvailable, String drivingLicenceNumber, String dirivinglicenseimage, String higheshtEducation, String doyoustudynow, String whichLevel, String educationinstitution, String educationFinishingWant, String training, String primaryprofession, String secondaryprofession, String ifunemployednow, String rickformofownership, String ricksourcesoffinance, String ricknooftransport, String maritialstatus, String marriageRegNo, String marriageRegDate, String divorceRegNo, String divorceRegDate, String incomefromMainOccuption, String incomefromSecondOccuption, String additionalincome, String mobaileNumber, String email, String accountNo, String mobaileNo, String bankName, String branchName, String ismemberlivehere, String mlivingAddress, String memberimage, String kinnumber) {
+    public MNEntity(int id, String name, String member_id, String bloodgroup, String fathername, String mothername, String gender, String isHead, String relationship, String bdaydate, String bdaymonth, String bdayyear, String age, String birthcertificateno, String birthcertificateimage, String nationality, String nid, String nidimage, String membervaccine, String disability, String ismothervaccination, String nearesthospital, String maternitynutritionconsultancy, String consultingwith, String iseligiblecouple, String anyfamilyplaning, String socialsafetynet, String socialsafetynetcardinfo, String socialsafetynetcardphoto, String isTinAvaiable, String tinNumber, String tinimage, String passportno, String passportimage, String isDrivingLicenceAvailable, String drivingLicenceNumber, String dirivinglicenseimage, String higheshtEducation, String doyoustudynow, String whichLevel, String educationinstitution, String educationFinishingWant, String training, String primaryprofession, String secondaryprofession, String ifunemployednow, String rickformofownership, String ricksourcesoffinance, String ricknooftransport, String maritialstatus, String spousename, String marriageRegNo, String marriageRegDate, String divorceRegNo, String divorceRegDate, String incomefromMainOccuption, String incomefromSecondOccuption, String additionalincome, String mobaileNumber, String email, String accountNo, String mobaileNo, String bankName, String branchName, String ismemberlivehere, String mlivingAddress, String memberimage, String kinnumber) {
         this.id = id;
         this.name = name;
         this.member_id = member_id;
@@ -328,6 +332,7 @@ public class MNEntity {
         this.ricksourcesoffinance = ricksourcesoffinance;
         this.ricknooftransport = ricknooftransport;
         this.maritialstatus = maritialstatus;
+        this.spousename = spousename;
         this.marriageRegNo = marriageRegNo;
         this.marriageRegDate = marriageRegDate;
         this.divorceRegNo = divorceRegNo;
@@ -346,5 +351,4 @@ public class MNEntity {
         this.memberimage = memberimage;
         this.kinnumber = kinnumber;
     }
-
 }

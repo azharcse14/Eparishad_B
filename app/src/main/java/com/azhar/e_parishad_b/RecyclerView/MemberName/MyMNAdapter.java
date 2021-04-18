@@ -103,6 +103,7 @@ public class MyMNAdapter extends RecyclerView.Adapter<MyMNViewHolder> {
                         dataSet.get(position).ricksourcesoffinance,
                         dataSet.get(position).ricknooftransport,
                         dataSet.get(position).maritialstatus,
+                        dataSet.get(position).spousename,
                         dataSet.get(position).marriageRegNo,
                         dataSet.get(position).marriageRegDate,
                         dataSet.get(position).divorceRegNo,

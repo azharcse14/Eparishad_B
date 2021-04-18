@@ -56,28 +56,29 @@ public class MaritalStatusDetailActivity extends AppCompatActivity {
             spouseNameEt.setText(spouseName);
         }
 
-        spouseNameTv.setVisibility(View.GONE);
-        spouseNameEt.setVisibility(View.GONE);
 
-        marriedRG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                radioButton = (RadioButton) findViewById(checkedId);
-
-                if (checkedId == 1){
-                    spouseNameTv.setVisibility(View.VISIBLE);
-                    spouseNameEt.setVisibility(View.VISIBLE);
-
-
-//                    Toast.makeText(getBaseContext(), radioButton.getText(), Toast.LENGTH_SHORT).show();
-
-                }else {
-                    spouseNameTv.setVisibility(View.GONE);
-                    spouseNameEt.setVisibility(View.GONE);
-                }
-            }
-        });
+//        spouseNameTv.setVisibility(View.GONE);
+//        spouseNameEt.setVisibility(View.GONE);
+//
+//        marriedRG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//
+//                radioButton = (RadioButton) findViewById(checkedId);
+//
+//                if (checkedId == 1){
+//                    spouseNameTv.setVisibility(View.VISIBLE);
+//                    spouseNameEt.setVisibility(View.VISIBLE);
+//
+//
+////                    Toast.makeText(getBaseContext(), radioButton.getText(), Toast.LENGTH_SHORT).show();
+//
+//                }else {
+//                    spouseNameTv.setVisibility(View.GONE);
+//                    spouseNameEt.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
         //================= RecyclerView =====================
 
