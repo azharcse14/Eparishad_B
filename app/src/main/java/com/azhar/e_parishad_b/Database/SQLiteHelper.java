@@ -67,24 +67,47 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                 Cursor cursorone = sqLiteDatabase.rawQuery("SELECT * FROM MNEntity a where a.kinnumber = ?",scripts,null);
                 while(cursorone.moveToNext()){
                     String newname = cursorone.getString(1);
+                    String fnewname = cursorone.getString(4);
                     name.add(newname);
+                    name.add(fnewname);
                     System.out.println("cursorone:  "+cursorone.getString(1));
                 }
             }
 
             System.out.println("ArrayList: "+name);
-            return name;
+//            return name;
 
         }catch (Exception e){
             System.out.println("e"+e);
         }
 
-
-//        Cursor cursor = sqLiteDatabase.rawQuery("SELECT *" +
-//                " FROM MNEntity where kinnumber = kinnumber",scripts,null);
-//        return cursor;
-
         return name;
+    }
+
+
+    //=========================================================================================
+    public ArrayList<String> mothersName(String kinnumber){
+        System.out.println(kinnumber);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        String[] scripts = new String [] {kinnumber};
+        ArrayList<String> mName = new ArrayList<String>();
+
+        try {
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM MNEntity a where a.kinnumber = ?",scripts,null);
+
+            if (cursor.getCount()>0){
+                Cursor cursorone = sqLiteDatabase.rawQuery("SELECT * FROM MNEntity a where a.kinnumber = ?",scripts,null);
+                while(cursorone.moveToNext()){
+                    String newname = cursorone.getString(5);
+                    mName.add(newname);
+                }
+            }
+
+        }catch (Exception e){
+            System.out.println("e"+e);
+        }
+
+        return mName;
     }
 
 }

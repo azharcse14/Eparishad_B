@@ -47,6 +47,7 @@ public class MemberFirstBFMGActivity extends AppCompatActivity {
     String nameSp, bloodGroupSp, fathersNameSp, mothersNameSp;
 
     ArrayList<String> names;
+    ArrayList<String> mothersNames;
 
     ArrayList<MNEntity> mnEntityArrayList;
 
@@ -75,6 +76,7 @@ public class MemberFirstBFMGActivity extends AppCompatActivity {
         SQLiteHelper sqLiteHelper = new SQLiteHelper(getApplicationContext());
 
         names = sqLiteHelper.memberName(kinnumber);
+        mothersNames = sqLiteHelper.mothersName(kinnumber);
 
         //=================================================================================================
 
@@ -101,7 +103,7 @@ public class MemberFirstBFMGActivity extends AppCompatActivity {
             }
         });
 
-        motherNameAdapter = new ArrayAdapter<>(MemberFirstBFMGActivity.this, android.R.layout.simple_dropdown_item_1line, names);
+        motherNameAdapter = new ArrayAdapter<>(MemberFirstBFMGActivity.this, android.R.layout.simple_dropdown_item_1line, mothersNames);
         motherNameAcTv.setThreshold(1);
         motherNameAcTv.setAdapter(motherNameAdapter);
 
