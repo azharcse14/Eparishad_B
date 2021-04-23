@@ -70,11 +70,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                     String fnewname = cursorone.getString(4);
                     name.add(newname);
                     name.add(fnewname);
-                    System.out.println("cursorone:  "+cursorone.getString(1));
+//                    System.out.println("cursorone:  "+cursorone.getString(1));
                 }
             }
 
-            System.out.println("ArrayList: "+name);
+//            System.out.println("ArrayList: "+name);
 //            return name;
 
         }catch (Exception e){
