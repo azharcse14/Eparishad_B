@@ -9,6 +9,7 @@ import androidx.room.Update;
 
 import com.azhar.e_parishad_b.Database.Entity.FDEntity;
 import com.azhar.e_parishad_b.Database.Entity.FaEntity;
+import com.azhar.e_parishad_b.Database.Entity.GISEntity;
 import com.azhar.e_parishad_b.Database.Entity.Loan.LoanEntity;
 import com.azhar.e_parishad_b.Database.Entity.Loan.LoanTempEntity;
 import com.azhar.e_parishad_b.Database.Entity.Member.MNEntity;
@@ -111,4 +112,24 @@ public interface DAO {
 
     @Query("DELETE FROM FaEntity")
     public void deleteAllFaEntity();
+
+    //========================================================================================
+    @Insert
+    Long insertTaskGISEntity(GISEntity gisEntity);
+
+    @Query("select*from gisentity order by id asc")
+    List<GISEntity> getAllGISEntity();
+
+    @Update
+    void updateGISEntity(GISEntity gisEntity);
+
+    @Query("UPDATE GISEntity SET latitude = :lat , longitude = :lng WHERE surveyID = :surveyid")
+    void updateLatLng(String lat, String lng, String surveyid);
+
+    @Delete
+    void deleteTaskGISEntity(GISEntity gisEntity);
+
+    @Query("DELETE FROM GISEntity")
+    public void deleteAllGISEntity();
+
 }

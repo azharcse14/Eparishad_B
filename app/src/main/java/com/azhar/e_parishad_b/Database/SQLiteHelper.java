@@ -1,5 +1,6 @@
 package com.azhar.e_parishad_b.Database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,7 +12,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "final.db";
     public static final int VERSION_NUMBER = 1;
-    public static final String TABLE_NAME = "MNEntity";
+    public static final String TABLE_NAME = "GISEntity";
+
+    public static final String LATITUDE = "latitude";
+    public static final String LONGITUDE = "longitude";
 
 
     Context context;
@@ -109,5 +113,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
         return mName;
     }
+
 
 }

@@ -344,6 +344,14 @@
     <string name="type_of_rice_mill">Type of Rice Mill</string>
     <string name="are_you_interested_in_milling_rice_at_govt_fixed_rate_for_a_continuous_business">Are you interested in milling rice at govt fixed rate for a continuous business?</string>
     <string name="spouse_name">Spouse Name</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="edit">Edit</string>
+    <string name="get_gis_code">Get GIS Code</string>
+    <string name="gis_code">GIS CODE</string>
+    <string name="save">SAVE</string>
 
 
     <string-array name="title">

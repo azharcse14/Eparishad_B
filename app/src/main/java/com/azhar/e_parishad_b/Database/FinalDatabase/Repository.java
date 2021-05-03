@@ -8,6 +8,7 @@ import androidx.room.Room;
 
 import com.azhar.e_parishad_b.Database.Entity.FDEntity;
 import com.azhar.e_parishad_b.Database.Entity.FaEntity;
+import com.azhar.e_parishad_b.Database.Entity.GISEntity;
 import com.azhar.e_parishad_b.Database.Entity.Loan.LoanEntity;
 import com.azhar.e_parishad_b.Database.Entity.Loan.LoanTempEntity;
 import com.azhar.e_parishad_b.Database.Entity.Member.MNEntity;
@@ -280,7 +281,7 @@ public class Repository {
 
 
     //============================================================================================================
-    //=================================================MEMBER TEMP===========================================================
+    //=================================================LOAN TEMP===========================================================
     //============================================================================================================
 
     //=================== Delete All Task ===========================
@@ -389,6 +390,90 @@ public class Repository {
             }
         }.execute();
     }
+
+
+
+    //============================================================================================================
+    //=================================================GIS Entity===========================================================
+    //============================================================================================================
+
+    //=================== Delete All Task ===========================
+    public void DeleteAllGIS(){
+        new AsyncTask<Void, Void, Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().deleteAllGISEntity();
+                return null;
+            }
+        }.execute();
+    }
+
+    //===============Delete Task Start=================
+
+    public void DeleteTaskGIS(final GISEntity gisEntity){
+        new AsyncTask<Void, Void, Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().deleteTaskGISEntity(gisEntity);
+                return null;
+            }
+        }.execute();
+    }
+
+    //===============Delete Task End=================
+
+    //===============Update Task Start=================
+
+    public void UpdateGISTask(final GISEntity gisEntity){
+        new AsyncTask<Void, Void, Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().updateGISEntity(gisEntity);
+                return null;
+            }
+        }.execute();
+    }
+
+    //=================Update lat lng ====================
+    public void UpdateLatLng(String lat, String lng, String surveyid){
+        new AsyncTask<Void, Void, Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().updateLatLng(lat,lng, surveyid);
+                return null;
+            }
+        }.execute();
+    }
+    //===============Update Task End=================
+
+    //============= Fetch Task ==========
+    public List<GISEntity> getGIS(){
+        List<GISEntity> gisEntityList = database.dao().getAllGISEntity();
+        return gisEntityList;
+    }
+
+    //========== Insert Task =================
+    public void InsertGISTask(final GISEntity gisEntity){
+        new AsyncTask<Void,Void,Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().insertTaskGISEntity(gisEntity);
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+//                Toast.makeText(context, loanTempEntity.id+"is inserted", Toast.LENGTH_LONG).show();
+            }
+        }.execute();
+    }
+
 
 
 

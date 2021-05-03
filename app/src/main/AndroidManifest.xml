@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eparishad_B">
-        <activity android:name=".Activity.FSAActivity"/>
+        <activity android:name=".Activity.GIScollectionActivity"></activity>
+        <activity android:name=".Activity.GisActivity" />
+        <activity android:name=".Activity.FSAActivity" />
         <activity android:name=".Activity.Members.EducationDetailsActivity" />
         <activity android:name=".Activity.Members.MemberLiveActivity" />
         <activity android:name=".Activity.Members.BankDetailActivity" />
@@ -24,14 +26,17 @@
         <activity android:name=".Activity.Members.MaritalStatusDetailActivity" />
         <activity android:name=".Activity.Members.ProfessionActivity" />
         <activity android:name=".Activity.Members.TrainingActivity" />
-        <activity android:name=".Activity.Members.MemberFirstBFMGActivity"/>
-        <activity android:name=".Activity.Login.LoginActivity"
+        <activity android:name=".Activity.Members.MemberFirstBFMGActivity" />
+        <activity
+            android:name=".Activity.Login.LoginActivity"
             android:screenOrientation="portrait">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
         </activity>
         <activity
@@ -133,20 +138,26 @@
         <activity
             android:name=".Activity.HoldingNoActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Activity.MainActivity"/>
-
-
-        <activity android:name=".Activity.SplashScreenActivity"
-            android:theme="@style/AppTheme.Launcher">
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.SplashScreenActivity"
+            android:theme="@style/AppTheme.Launcher">
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
 
-        <service android:name=".Networking.EPNET.Service"/>
+        <service android:name=".Networking.EPNET.Service" />
     </application>
 
 </manifest>
