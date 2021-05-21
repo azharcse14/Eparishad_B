@@ -21,7 +21,7 @@ import java.util.List;
 public interface DAO {
 
     @Insert
-    Long insertTask(FDEntity fdEntity);
+    void insertTask(FDEntity fdEntity);
 
     @Query("select*from fdentity order by id asc")
     List<FDEntity> getAll();
@@ -37,7 +37,7 @@ public interface DAO {
 
 
     @Query("DELETE FROM FDEntity")
-    public void deleteAll();
+    void deleteAll();
 
     //===================================================================================================
     @Insert
@@ -115,13 +115,16 @@ public interface DAO {
 
     //========================================================================================
     @Insert
-    Long insertTaskGISEntity(GISEntity gisEntity);
+    void insertTaskGISEntity(GISEntity gisEntity);
 
     @Query("select*from gisentity order by id asc")
     List<GISEntity> getAllGISEntity();
 
     @Update
     void updateGISEntity(GISEntity gisEntity);
+
+    @Query("UPDATE GISEntity SET isSync= '1' WHERE surveyID = :surveyid")
+    void updateSync(String surveyid);
 
     @Query("UPDATE GISEntity SET latitude = :lat , longitude = :lng WHERE surveyID = :surveyid")
     void updateLatLng(String lat, String lng, String surveyid);

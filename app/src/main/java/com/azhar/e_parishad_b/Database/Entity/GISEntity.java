@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey;
 @Entity
 public class GISEntity {
 
-    @NonNull
     @PrimaryKey(autoGenerate = true)
     public int id;
 
@@ -32,10 +31,10 @@ public class GISEntity {
     public String longitude;
 
 
-    @ColumnInfo(name = "isDraft")
-    public String isDraft;
+    @ColumnInfo(name = "isSync")
+    public String isSync;
 
-    public GISEntity(int id, String surveyId, String khanahead, String holdingnumber, String village, String latitude, String longitude, String isDraft) {
+    public GISEntity(int id, String surveyId, String khanahead, String holdingnumber, String village, String latitude, String longitude, String isSync) {
         this.id = id;
         this.surveyId = surveyId;
         this.khanahead = khanahead;
@@ -43,16 +42,16 @@ public class GISEntity {
         this.village = village;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.isDraft = isDraft;
+        this.isSync = isSync;
     }
 
-    public GISEntity(String surveyIdi, String khanaheadi, String holdingnumberi, String villagei, String latitudei, String longitudei, String isDrafti) {
+    public GISEntity(String surveyIdi, String khanaheadi, String holdingnumberi, String villagei, String latitudei, String longitudei, String isSynci) {
         this.surveyId = surveyIdi;
         this.khanahead = khanaheadi;
         this.holdingnumber = holdingnumberi;
         this.village = villagei;
         this.latitude = latitudei;
         this.longitude = longitudei;
-        this.isDraft = isDrafti;
+        this.isSync = isSynci;
     }
 }

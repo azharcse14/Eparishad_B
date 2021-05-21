@@ -8,6 +8,7 @@ import android.provider.Settings;
 import androidx.annotation.Nullable;
 
 import com.azhar.e_parishad_b.Networking.FA.SyncFa;
+import com.azhar.e_parishad_b.Networking.SyncGIS;
 
 public class Service extends android.app.Service {
 
@@ -17,7 +18,8 @@ public class Service extends android.app.Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 //        return super.onStartCommand(intent, flags, startId);
 
-        SyncFa syncFa = new SyncFa(getApplicationContext());
+        new SyncFa(getApplicationContext());
+//        new SyncGIS(getApplicationContext());
 
         return START_STICKY;
     }

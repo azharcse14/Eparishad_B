@@ -474,6 +474,19 @@ public class Repository {
         }.execute();
     }
 
+    //===============Update Task Start=================
+
+    public void UpdateSync(String surveyid){
+        new AsyncTask<Void, Void, Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                database.dao().updateSync(surveyid);
+                return null;
+            }
+        }.execute();
+    }
+    //===============Update Task End=================
 
 
 

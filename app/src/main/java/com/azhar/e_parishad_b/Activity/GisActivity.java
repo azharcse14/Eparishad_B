@@ -59,6 +59,10 @@ public class GisActivity extends AppCompatActivity {
         startActivity(new Intent(GisActivity.this, GisActivity.class));
     }
 
+    public void goToHome(View view) {
+        startActivity(new Intent(GisActivity.this, MainActivity.class));
+    }
+
     class LoadDataTask extends AsyncTask<Void, Void, Void> {
 
         Repository repository;

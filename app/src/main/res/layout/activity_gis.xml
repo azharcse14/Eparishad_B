@@ -19,6 +19,12 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@color/white">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon"
+            android:onClick="goToHome"/>
+
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout

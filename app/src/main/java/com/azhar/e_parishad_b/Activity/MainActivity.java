@@ -36,6 +36,8 @@ import com.azhar.e_parishad_b.Database.Entity.Member.MNEntity;
 import com.azhar.e_parishad_b.ImageProcessing.ImageEncoder;
 import com.azhar.e_parishad_b.Networking.EPNET.Service;
 import com.azhar.e_parishad_b.Networking.FA.MyWorker;
+import com.azhar.e_parishad_b.Networking.FA.SyncFa;
+import com.azhar.e_parishad_b.Networking.SyncGIS;
 import com.azhar.e_parishad_b.R;
 import com.azhar.e_parishad_b.RecyclerView.Fa.FaAdapter;
 import com.azhar.e_parishad_b.RecyclerView.Top.MyTopAdapter;
@@ -98,15 +100,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //=====================================================================================
         //=====================================================================================
 
-        Repository  repository = new Repository(getApplicationContext());
-        repository.DeleteAllGIS();
-
-
-        repository.InsertGISTask(new GISEntity("20211","Jamal Uddin", "22323","Bijoypur", "23.813287730", "90.4103383","0"));
-        repository.InsertGISTask(new GISEntity("20212","Kamal Uddin", "22324","Bijoypur", "23.813287730", "90.4103383","0"));
-        repository.InsertGISTask(new GISEntity("20213","Kamal Uddin", "22325","Bijoypur", "", "","0"));
-
-
+//        new LoadTask().execute();
         //=====================================================================================
         //=====================================================================================
 
@@ -133,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
        LoadDataTask loadDataTask = new LoadDataTask();
        loadDataTask.execute();
 
-//       refreshPreiodicWork();
+
     }
 
 
@@ -163,9 +157,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent =new Intent(MainActivity.this,GisActivity.class);
             startActivity(intent);
         }
+        else if (item.getItemId() == R.id.sync_nav_btn_id) {
+            refreshPreiodicWork();
+        }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return false;
+    }
+
+    class LoadTask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            try {
+                refreshPreiodicWork();
+            }catch (Exception e){
+                System.out.println(e+"");
+            }
+
+            return null;
+        }
     }
 
     class LoadDataTask extends AsyncTask<Void, Void, Void> {
@@ -197,18 +208,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-//    public static void refreshPreiodicWork(){
-//        Constraints constraints = new Constraints.Builder()
-//                .setRequiresDeviceIdle(false)
-//                .setRequiresCharging(false)
-//                .setRequiredNetworkType(NetworkType.CONNECTED)
-//                .setRequiresBatteryNotLow(true)
-//                .setRequiresStorageNotLow(true)
-//                .build();
-//
-//        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES).setConstraints(constraints).build();
-//        WorkManager.getInstance().enqueue(periodicWorkRequest);
-//    }
+    public void refreshPreiodicWork(){
+        Constraints constraints = new Constraints.Builder()
+                .setRequiresDeviceIdle(false)
+                .setRequiresCharging(false)
+                .setRequiredNetworkType(NetworkType.CONNECTED)
+                .setRequiresBatteryNotLow(true)
+                .setRequiresStorageNotLow(true)
+                .build();
 
+        PeriodicWorkRequest periodicWorkRequest = new PeriodicWorkRequest.Builder(MyWorker.class,
+                20, TimeUnit.MINUTES).setConstraints(constraints).build();
+        WorkManager.getInstance(this).enqueue(periodicWorkRequest);
+    }
 
 }
