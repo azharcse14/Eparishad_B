@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ImageView imageView;
     TextView totalCountTv;
     int totalCount;
-
+    
     //==========================================
     RecyclerView recyclerViewfd, recyclerViewfa ;
     RecyclerView.LayoutManager layoutManager;

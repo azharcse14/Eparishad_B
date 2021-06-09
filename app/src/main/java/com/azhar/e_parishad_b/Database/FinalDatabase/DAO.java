@@ -89,7 +89,7 @@ public interface DAO {
 
     //========================================================================================
     @Insert
-    Long insertTaskLoanTempEntity(LoanTempEntity loanTempEntity);
+    void insertTaskLoanTempEntity(LoanTempEntity loanTempEntity);
 
     @Query("select*from loantempentity order by id asc")
     List<LoanTempEntity> getAllLoanTempEntity();
